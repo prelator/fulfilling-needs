@@ -7,7 +7,7 @@ angular.module('fulfillingNeedsApp')
         url: 'my-needs',
         views: {
           'tabView': {
-            templateUrl: 'app/my-needs/my-needs.html',
+            templateUrl: 'app/main/subviews/my-needs/my-needs.html',
             controller: 'MyNeedsCtrl'
           }
         } 
