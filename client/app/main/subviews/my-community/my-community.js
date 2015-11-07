@@ -10,6 +10,9 @@ angular.module('fulfillingNeedsApp')
             templateUrl: 'app/main/subviews/my-community/my-community.html',
             controller: 'MyCommunityCtrl'
           }
+        },
+        data: {
+          title: 'My Community'
         }
       });
   });

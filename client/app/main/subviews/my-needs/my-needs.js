@@ -10,6 +10,9 @@ angular.module('fulfillingNeedsApp')
             templateUrl: 'app/main/subviews/my-needs/my-needs.html',
             controller: 'MyNeedsCtrl'
           }
+        },
+        data: {
+          title: 'My Needs'
         } 
       });
   });

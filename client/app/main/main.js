@@ -10,6 +10,9 @@ angular.module('fulfillingNeedsApp')
             templateUrl: 'app/main/main.html',
             controller: 'MainCtrl'
           }
+        },
+        data: {
+          title: 'Main'
         } 
       });
   });

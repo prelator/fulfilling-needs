@@ -10,6 +10,9 @@ angular.module('fulfillingNeedsApp')
             templateUrl: 'app/main/subviews/my-church/my-church.html',
             controller: 'MyChurchCtrl'
           }
-        }  
+        },
+        data: {
+          title: 'My Church'
+        }
       });
   });
