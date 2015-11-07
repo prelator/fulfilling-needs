@@ -10,6 +10,9 @@ angular.module('fulfillingNeedsApp')
             templateUrl: 'app/main/subviews/my-groups/my-groups.html',
             controller: 'MyGroupsCtrl' 
           }
+        },
+        data: {
+          title: 'My Groups'
         }
       });
   });
