@@ -17,6 +17,7 @@
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
     <link rel="stylesheet" href="app/app.css">
+    <link rel="stylesheet" type="text/css" href="/assets/SLDS0110/assets/styles/salesforce-lightning-design-system-ltng.css">
       <!-- injector:css -->
       <!-- endinjector -->
     <!-- endbuild -->
@@ -25,9 +26,10 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
+    <div ng-include="'components/navbar/navbar.html'"></div>
+    
     <!-- Add your site or application content here -->
-    <div ui-view=""></div>
+    <div ui-view="main"></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -70,6 +72,8 @@
           <script src="app/admin/admin.js"></script>
           <script src="app/main/main.controller.js"></script>
           <script src="app/main/main.js"></script>
+          <script src="app/my-needs/my-needs.controller.js"></script>
+          <script src="app/my-needs/my-needs.js"></script>
           <script src="components/auth/auth.service.js"></script>
           <script src="components/auth/user.service.js"></script>
           <script src="components/modal/modal.service.js"></script>
