@@ -10,9 +10,12 @@ angular.module('fulfillingNeedsApp')
             templateUrl: 'app/main/subviews/my-groups/my-groups.html',
             controller: 'MyGroupsCtrl' 
           }
+<<<<<<< HEAD
         },
         data: {
           title: 'My Groups'
+=======
+>>>>>>> master
         }
       });
   });

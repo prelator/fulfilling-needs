@@ -10,9 +10,12 @@ angular.module('fulfillingNeedsApp')
             templateUrl: 'app/main/subviews/my-abilities/my-abilities.html',
             controller: 'MyAbilitiesCtrl'
           }
+<<<<<<< HEAD
         },
         data: {
           title: 'My Abilities'
+=======
+>>>>>>> master
         }
       });
   });
