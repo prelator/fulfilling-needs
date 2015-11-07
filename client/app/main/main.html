@@ -1,27 +1,89 @@
-<div class="bootstrap">
-  <header class="hero-unit" id="banner">
-    <div class="container">
-      <h1>'Allo, 'Allo!</h1>
-      <p class="lead">Kick-start your next web app with Angular Fullstack</p>
-    </div>
-  </header>
+<!-- WRAPPER -->
+  <div class="slds">
 
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h1 class="page-header">Features:</h1>
-        <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in awesomeThings">
-          <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}</a></li>
-        </ul>
+    <!--HEADER-->
+    <div class="slds-grid slds-m-horizontal--medium slds-m-vertical--large">
+      <div class="slds-col">
+        <div class="slds-media">
+          <div class="slds-media__figure">
+            <img class="slds-icon slds-icon--large slds-icon-standard-account" src="../assets/SLDS0110/assets/images/avatar2.jpg" alt=""/>
+          </div>
+          <div class="slds-media__body">
+            <p class="slds-text-heading--label">Mary Server</p>
+            <h1 class="slds-text-heading--medium">My Needs</h1>
+          </div>
+        </div>
+      </div>
+      <div class="slds-col slds-no-flex slds-align-middle">
+        <div class="slds-button-group" role="group">
+          <button class="slds-button slds-button--neutral">New</button>
+          <button class="slds-button slds-button--neutral">Edit</button>
+        </div>
       </div>
     </div>
-  </div>
+    <!--/HEADER-->
 
-  <footer class="footer">
-    <div class="container">
-        <p>Angular Fullstack v2.1.1 |
-          <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
-           <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+    <!--CONTENT-->
+    <div class="myapp slds-m-top--large">
+
+      <!--TABS-->
+      <div class="slds-tabs--default">
+        <!--TABS MENU-->
+        <ul class="slds-tabs--default__nav" role="tablist">
+          <li class="slds-tabs__item slds-text-heading--label slds-active" title="My Needs" role="presentation">
+            <a ui-sref="main.my-needs" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1">
+              <img src="../assets/SLDS0110/assets/icons/standard/user_60.png" class="slds-button__icon slds-button__icon--left">
+              My Needs (1)
+            </a>
+          </li>
+          <li class="slds-tabs__item slds-text-heading--label" title="My Groups" role="presentation">
+            <a ui-sref="main.my-groups" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2">
+              <img src="../assets/SLDS0110/assets/icons/action/new_group_60.png" class="slds-button__icon slds-button__icon--left">
+              My Groups (2)
+            </a>
+          </li>
+          <li class="slds-tabs__item slds-text-heading--label" title="My Church" role="presentation">
+            <a href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3">
+              <img src="../assets/SLDS0110/assets/icons/standard/household_60.png" class="slds-button__icon slds-button__icon--left">
+              My Church (8)
+            </a>
+          </li>
+          <li class="slds-tabs__item slds-text-heading--label" title="My Community" role="presentation">
+            <a href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-4">
+              <img src="../assets/SLDS0110/assets/icons/action/map_60.png" class="slds-button__icon slds-button__icon--left">
+              My Community (20)
+            </a>
+          </li>
+          <li class="slds-tabs__item slds-text-heading--label" title="My Abilities" role="presentation">
+            <a href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-5">
+              <img src="../assets/SLDS0110/assets/icons/standard/user_60.png" class="slds-button__icon slds-button__icon--left" style="filter: invert(100%)">
+              My Abilities (5)
+            </a>
+          </li>
+        </ul>
+        <!--/TABS MENU-->
+
+        <!--ALERT-->
+        <div class="slds-notify slds-notify--alert slds-theme--alert-texture slds-m-top--small" role="alert">
+          <button class="slds-button slds-button--icon-inverse slds-notify__close">
+            <img src="../assets/SLDS0110/assets/icons/utility/close_60.png" class="slds-button__icon">
+          </button>
+          <h2 class="slds-text-body--regular">There are 10 other needs in your community. Do you know someone who can help?</h2>
+        </div>
+        <!--/ALERT-->
+        
+        <!-- Tabs view -->
+        <div ui-view="tabView"></div>
+        
+
+      </div>
+      <!--/TABS-->
+
     </div>
-  </footer>
-</div>
+    <!--/CONTENT-->
+
+    <!--FOOTER-->
+    <!--/ FOOTER-->
+
+  </div>
+<!--/ WRAPPER
