@@ -5,7 +5,11 @@ angular.module('fulfillingNeedsApp')
     $stateProvider
       .state('main', {
         url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl'
+        views: {
+          'main': {
+            templateUrl: 'app/main/main.html',
+            controller: 'MainCtrl'
+          }
+        } 
       });
   });

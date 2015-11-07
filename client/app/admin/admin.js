@@ -5,7 +5,11 @@ angular.module('fulfillingNeedsApp')
     $stateProvider
       .state('admin', {
         url: '/admin',
-        templateUrl: 'app/admin/admin.html',
-        controller: 'AdminCtrl'
+        views: {
+          'main': {
+            templateUrl: 'app/admin/admin.html',
+            controller: 'AdminCtrl'
+          }
+        }
       });
   });
