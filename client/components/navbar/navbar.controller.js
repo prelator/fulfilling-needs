@@ -6,10 +6,6 @@ angular.module('fulfillingNeedsApp')
       {
         'title': 'Home',
         'link': '/'
-      },
-      {
-        'title': 'My Needs',
-        'link': '/my-needs'
       }
     ];
 

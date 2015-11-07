@@ -1,224 +1,43 @@
-<!--WRAPPER-->
-  <div class="slds">
-
-    <!--HEADER-->
-    <div class="slds-grid slds-m-horizontal--medium slds-m-vertical--large">
-      <div class="slds-col">
-        <div class="slds-media">
-          <div class="slds-media__figure">
-            <img class="slds-icon slds-icon--large slds-icon-standard-account" src="../assets/SLDS0110/assets/images/avatar2.jpg" alt=""/>
-          </div>
-          <div class="slds-media__body">
-            <p class="slds-text-heading--label">Mary Server</p>
-            <h1 class="slds-text-heading--medium">My Needs</h1>
-          </div>
+<!--TAB: MY NEEDS-->
+<div id="tab-default-1" class="slds-tabs__content slds-show" role="tabpanel">
+  <!--ITEM LIST-->
+  <ul id="need-list" class="slds-list--vertical slds-has-cards">
+    <!--NEED TILE: MY NEEDS-->
+    <div class="slds-media slds-tile slds-box slds slds-m-bottom--small">
+      <div class="slds-media__figure">
+        <img class="slds-avatar slds-avatar--medium" src="../assets/SLDS0110/assets/images/avatar2.jpg" alt=""/>
+      </div>
+      <div class="slds-media__body">
+        <p class="slds-tile__title slds-truncate">
+          <a href="#">Mary Server</a>
+        </p>
+        <div class="slds-tile__detail">
+          <p class="slds-text-body--small">Help By: 10/22/2015</p>
+          <p class="slds-text-body--regular">I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.</p>
+        </div>
+        <div class="container slds-m-top--x-small">
+          <span class="slds-badge">Counseling</span>
+          <span class="slds-badge slds-theme--shade">Yesterday</span>
+          <span class="slds-badge slds-theme--inverse">1.5 Miles</span>
+          <span class="slds-badge slds-theme">Small Group</span>
         </div>
       </div>
-      <div class="slds-col slds-no-flex slds-align-middle">
-        <div class="slds-button-group" role="group">
-          <button class="slds-button slds-button--neutral">New</button>
-          <button class="slds-button slds-button--neutral">Edit</button>
-        </div>
-      </div>
-    </div>
-    <!--/HEADER-->
-
-    <!--CONTENT-->
-    <div class="myapp slds-m-top--large">
-
-      <!--TABS-->
-      <div class="slds-tabs--default">
-        <!--TABS MENU-->
-        <ul class="slds-tabs--default__nav" role="tablist">
-          <li class="slds-tabs__item slds-text-heading--label slds-active" title="My Needs" role="presentation">
-            <a href="#" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1">
-              <img src="../assets/SLDS0110/assets/icons/standard/user_60.png" class="slds-button__icon slds-button__icon--left">
-              My Needs (1)
-            </a>
-          </li>
-          <li class="slds-tabs__item slds-text-heading--label" title="My Groups" role="presentation">
-            <a href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2">
-              <img src="../assets/SLDS0110/assets/icons/action/new_group_60.png" class="slds-button__icon slds-button__icon--left">
-              My Groups (2)
-            </a>
-          </li>
-          <li class="slds-tabs__item slds-text-heading--label" title="My Church" role="presentation">
-            <a href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3">
-              <img src="../assets/SLDS0110/assets/icons/standard/household_60.png" class="slds-button__icon slds-button__icon--left">
-              My Church (8)
-            </a>
-          </li>
-          <li class="slds-tabs__item slds-text-heading--label" title="My Community" role="presentation">
-            <a href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-4">
-              <img src="../assets/SLDS0110/assets/icons/action/map_60.png" class="slds-button__icon slds-button__icon--left">
-              My Community (20)
-            </a>
-          </li>
-          <li class="slds-tabs__item slds-text-heading--label" title="My Abilities" role="presentation">
-            <a href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-5">
-              <img src="../assets/SLDS0110/assets/icons/standard/user_60.png" class="slds-button__icon slds-button__icon--left" style="filter: invert(100%)">
-              My Abilities (5)
-            </a>
-          </li>
-        </ul>
-        <!--/TABS MENU-->
-
-        <!--ALERT-->
-        <div class="slds-notify slds-notify--alert slds-theme--alert-texture slds-m-top--small" role="alert">
-          <button class="slds-button slds-button--icon-inverse slds-notify__close">
-            <img src="../assets/SLDS0110/assets/icons/utility/close_60.png" class="slds-button__icon">
+      <div class="slds-no-flex">
+        <div class="slds-button-group">
+          <button class="slds-button slds-button--icon-border-filled slds-button--small slds-avatar slds-avatar--medium">
+            <img src="../assets/SLDS0110/assets/icons/utility/success_60.png" class="slds-button__icon slds-button__icon--large">
+            <span class="slds-assistive-text">Show More</span>
+            <!--Accept-->
           </button>
-          <h2 class="slds-text-body--regular">There are 10 other needs in your community. Do you know someone who can help?</h2>
+          <button class="slds-button slds-button--icon-border-filled slds-button--small slds-avatar slds-avatar--medium">
+            <img src="../assets/SLDS0110/assets/icons/utility/clear_60.png" class="slds-button__icon slds-button__icon--large">
+            <span class="slds-assistive-text">Show More</span>
+            <!--Reject-->
+          </button>
         </div>
-        <!--/ALERT-->
-        
-        <!--TAB: MY NEEDS-->
-        <div id="tab-default-1" class="slds-tabs__content slds-show" role="tabpanel">
-          <!--ITEM LIST-->
-          <ul id="need-list" class="slds-list--vertical slds-has-cards">
-            <!--NEED TILE: MY NEEDS-->
-            <div class="slds-media slds-tile slds-box slds slds-m-bottom--small">
-              <div class="slds-media__figure">
-                <img class="slds-avatar slds-avatar--medium" src="../assets/SLDS0110/assets/images/avatar2.jpg" alt=""/>
-              </div>
-              <div class="slds-media__body">
-                <p class="slds-tile__title slds-truncate">
-                  <a href="#">Mary Server</a>
-                </p>
-                <div class="slds-tile__detail">
-                  <p class="slds-text-body--small">Help By: 10/22/2015</p>
-                  <p class="slds-text-body--regular">I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.</p>
-                </div>
-                <div class="container slds-m-top--x-small">
-                  <span class="slds-badge">Counseling</span>
-                  <span class="slds-badge slds-theme--shade">Yesterday</span>
-                  <span class="slds-badge slds-theme--inverse">1.5 Miles</span>
-                  <span class="slds-badge slds-theme">Small Group</span>
-                </div>
-              </div>
-              <div class="slds-no-flex">
-                <div class="slds-button-group">
-                  <button class="slds-button slds-button--icon-border-filled slds-button--small slds-avatar slds-avatar--medium">
-                    <img src="../assets/SLDS0110/assets/icons/utility/success_60.png" class="slds-button__icon slds-button__icon--large">
-                    <span class="slds-assistive-text">Show More</span>
-                    <!--Accept-->
-                  </button>
-                  <button class="slds-button slds-button--icon-border-filled slds-button--small slds-avatar slds-avatar--medium">
-                    <img src="../assets/SLDS0110/assets/icons/utility/clear_60.png" class="slds-button__icon slds-button__icon--large">
-                    <span class="slds-assistive-text">Show More</span>
-                    <!--Reject-->
-                  </button>
-                </div>
-              </div>
-            </div>
-            <!--/NEED TILE: GROUP NEEDS-->
-
-            <div class="slds-card">
-              <div class="slds-card__header slds-grid">
-                <div class="slds-media slds-media--center slds-has-flexi-truncate">
-                  <div class="slds-media__figure">
-                    <img src="../assets/SLDS0110/assets/icons/standard/groups_60.png" class="slds-icon slds-icon-standard-contact slds-icon--small">
-                  </div>
-                  <div class="slds-media__body">
-                    <h2 class="slds-text-heading--small slds-truncate">Worship Team (2)</h2>
-                  </div>
-                </div>
-              <div class="slds-no-flex">
-                  <div class="slds-button-group">
-                    <button class="slds-button slds-button--neutral slds-button--small">New Need</button>
-                <button class="slds-button slds-button--neutral slds-button--small">View Group</button>
-                  </div>
-                </div>
-                  </div>
-              <div class="slds-card__body">
-              <!--/NEED TILE: OTHER NEEDS-->
-              <div class="slds-media slds-tile slds-box slds slds-m-bottom--small slds-theme--default">
-                <div class="slds-media__figure">
-                  <img class="slds-avatar slds-avatar--medium" src="../assets/SLDS0110/assets/images/avatar1.jpg" alt=""/>
-                </div>
-                <div class="slds-media__body">
-                  <p class="slds-tile__title slds-truncate">
-                    <a href="#">John Client</a>
-                  </p>
-                  <div class="slds-tile__detail">
-                    <p class="slds-text-body--small">Help By: 10/22/2015</p>
-                    <p class="slds-text-body--regular">Billy Joe needs help mowing his lawn. Needs a young whipper snapper who knows how to handle weeds.</p>
-                  </div>
-                  <div class="container slds-m-top--x-small">
-                    <span class="slds-badge">Counseling</span>
-                    <span class="slds-badge slds-theme--shade">Last Week</span>
-                    <span class="slds-badge slds-theme--inverse">1.5 Miles</span>
-                  </div>
-                </div>
-                <div class="slds-no-flex">
-                  <div class="slds-button-group">
-                    <button class="slds-button slds-button--icon-border-filled slds-button--small slds-avatar slds-avatar--medium">
-                      <img src="../assets/SLDS0110/assets/icons/utility/chat_60.png" class="slds-button__icon slds-button__icon--large">
-                      <span class="slds-assistive-text">Show More</span>
-                      <!--Respond-->
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <!--NEED TILE: OTHER NEEDS-->
-              <div class="slds-media slds-tile slds-box slds slds-m-bottom--small slds-theme--default">
-                <div class="slds-media__figure">
-                  <img class="slds-avatar slds-avatar--medium" src="../assets/SLDS0110/assets/images/avatar3.jpg" alt=""/>
-                </div>
-                <div class="slds-media__body">
-                  <p class="slds-tile__title slds-truncate">
-                    <a href="#">Shawn Bradsworth</a>
-                  </p>
-                  <div class="slds-tile__detail">
-                    <p class="slds-text-body--small">Help By: 10/22/2015</p>
-                    <p class="slds-text-body--regular">My mother needs help mowing her lawn. Needs a young whipper snapper who knows how to handle weeds.</p>
-                  </div>
-                  <div class="container slds-m-top--x-small">
-                    <span class="slds-badge">Counseling</span>
-                    <span class="slds-badge slds-theme--shade">Last Week</span>
-                    <span class="slds-badge slds-theme--inverse">1.5 Miles</span>
-                  </div>
-                </div>
-                <div class="slds-no-flex">
-                  <div class="slds-button-group">
-                    <button class="slds-button slds-button--icon-border-filled slds-button--small slds-avatar slds-avatar--medium">
-                      <img src="../assets/SLDS0110/assets/icons/utility/chat_60.png" class="slds-button__icon slds-button__icon--large">
-                      <span class="slds-assistive-text">Show More</span>
-                      <!--Respond-->
-                    </button>
-                  </div>
-                </div>
-              </div>
-              </div>
-            </div>
-
-
-
-          </ul>
-          <!--/ITEM LIST-->
-        </div>
-        <!--/TAB: MY NEEDS-->
-
-        <div id="tab-default-2" class="slds-tabs__content slds-hide" role="tabpanel">
-        </div>
-
-        <div id="tab-default-3" class="slds-tabs__content slds-hide" role="tabpanel">
-        </div>
-
-        <div id="tab-default-4" class="slds-tabs__content slds-hide" role="tabpanel">
-        </div>
-
-        <div id="tab-default-5" class="slds-tabs__content slds-hide" role="tabpanel">
-        </div>
-
       </div>
-      <!--/TABS-->
-
     </div>
-    <!--/CONTENT-->
-
-    <!--FOOTER-->
-    <!--/ FOOTER-->
-
-  </div>
-  <!--/ WRAPPER-->
+  </ul>
+  <!--/ITEM LIST-->
+</div>
+        <!--/TAB: MY NEEDS-->

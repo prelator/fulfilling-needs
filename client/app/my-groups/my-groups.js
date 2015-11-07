@@ -3,13 +3,13 @@
 angular.module('fulfillingNeedsApp')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('main.my-needs', {
-        url: 'my-needs',
+      .state('main.my-groups', {
+        url: 'my-groups',
         views: {
           'tabView': {
-            templateUrl: 'app/my-needs/my-needs.html',
-            controller: 'MyNeedsCtrl'
+            templateUrl: 'app/my-groups/my-groups.html',
+            controller: 'MyGroupsCtrl' 
           }
-        } 
+        }
       });
   });
