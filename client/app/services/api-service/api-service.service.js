@@ -6,7 +6,7 @@ angular.module('fulfillingNeedsApp')
     //request
     //  icon, name, needDate, description, area, requestDateDelta, distanceDelta
     var mockObject = {
-      'summary': {'counts':{'user':1, 'group':3, 'church':40, 'community':1000, 'abilities':5}},
+      'summary': {'counts':{'user':3, 'group':7, 'church':40, 'community':1000, 'abilities':2}},
       'requests': {
         'user': [{
           'icon': 'avatar2.jpg',
