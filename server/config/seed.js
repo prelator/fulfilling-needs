@@ -8,6 +8,7 @@
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
 var Request = require('../api/request/request.model');
+var Service = require('../api/service/service.model');
 //var Group = require('../api/group/group.model');
 
 Thing.find({}).remove(function() {
@@ -80,6 +81,63 @@ Request.find({}).remove(function() {
     distanceDelta: '1.5 miles'
   }, function() {
       console.log('Finished populating requests');
+    }
+  );
+});
+
+Service.find({}).remove(function() {
+  Service.create({
+    'icon': 'avatar2.jpg',
+    'name': 'Mary Server',
+    'group': 'Group Name',
+    'needDate': '10/22/2015',
+    'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
+    'area': 'lawncare',
+    'abillity': 'some abillity',
+    'dateDelta': 'Yesterday',
+    'distanceDelta': '1.5 miles'
+  },{
+    'icon': 'avatar2.jpg',
+    'name': 'Mary Server',
+    'group': 'Group Name',
+    'needDate': '10/22/2015',
+    'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
+    'area': 'lawncare',
+    'abillity': 'some abillity',
+    'dateDelta': 'Yesterday',
+    'distanceDelta': '1.5 miles'
+  },{
+    'icon': 'avatar2.jpg',
+    'name': 'Mary Server',
+    'group': 'Group Name',
+    'needDate': '10/22/2015',
+    'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
+    'area': 'lawncare',
+    'abillity': 'some abillity',
+    'dateDelta': 'Yesterday',
+    'distanceDelta': '1.5 miles'
+  },{
+    'icon': 'avatar2.jpg',
+    'name': 'Mary Server',
+    'group': 'Group Name',
+    'needDate': '10/22/2015',
+    'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
+    'area': 'lawncare',
+    'abillity': 'some abillity',
+    'dateDelta': 'Yesterday',
+    'distanceDelta': '1.5 miles'
+  },{
+    'icon': 'avatar2.jpg',
+    'name': 'Mary Server',
+    'group': 'Group Name',
+    'needDate': '10/22/2015',
+    'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
+    'area': 'lawncare',
+    'abillity': 'some abillity',
+    'dateDelta': 'Yesterday',
+    'distanceDelta': '1.5 miles'
+  }, function() {
+      console.log('Finished populating services');
     }
   );
 });
