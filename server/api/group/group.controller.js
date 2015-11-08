@@ -7,16 +7,41 @@
  * DELETE  /things/:id          ->  destroy
  */
 
-'use strict';
 
 var _ = require('lodash');
-var Group = require('./group.model');
+
+var xml2js = require('xml2js');
+var parser = new xml2js.Parser();
+
+var Route = require('../route/route.model');
+
+var Entities = require('html-entities').AllHtmlEntities;
+
+entities = new Entities();
+
 
 // Get list of things
 exports.index = function(req, res) {
-  Group.find(function (err, groups) {
+  Route.findOne({ 'name': 'group_profiles' }, function (err, route) {
     if(err) { return handleError(res, err); }
-    return res.status(200).json(groups);
+    parser.parseString(route, function (err, result) {
+      return res.status(200).send(result)
+    });
+    // route.payload = route.payload.replace(/({)([a-zA-Z0-9]+)(:)/,'$1"$2"$3')
+    // var payload = JSON.parse(route.payload)
+    // var groups = payload.ccb_api.response.groups.group;
+    //
+    // _groups = []
+    // for (var x in groups) {
+    //   var current = groups[x]
+    //   _groups.push({
+    //     "id": current.id
+    //   , "name": entities.encode(current.name)
+    //   , "description": current.description
+    //   // , "main_leader": current.main_leader
+    //   })
+    // }
+
   });
 };
 
