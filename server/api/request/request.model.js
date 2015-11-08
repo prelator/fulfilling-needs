@@ -3,25 +3,18 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
-var GroupSchema = new Schema({
-  groupID: String,
-  groupTypeID: String,
-  groupTypeName: String,
-  campusID: String,
-  campusName: String,
-  creatorID: String,
-  creatorName: String,
-  leaderID: String,
-  leaderFirstName: String,
-  leaderLastName: String,
+var RequestSchema = new Schema({
+  icon: String,
   name: String,
+  group: String,
+  needDate: String,
   description: String,
-  image: String,
-  areaID: String,
-  areaName: String,
-  active: Boolean
+  area: String,
+  dateDelta: String,
+  distanceDelta: String,
 });
 
+module.exports = mongoose.model('Request', RequestSchema);
 
 exports.all = function(){
   return [{

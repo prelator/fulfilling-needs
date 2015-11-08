@@ -1,28 +1,5 @@
 'use strict';
 
-var mongoose = require('mongoose'),
-    Schema = mongoose.Schema;
-
-var GroupSchema = new Schema({
-  groupID: String,
-  groupTypeID: String,
-  groupTypeName: String,
-  campusID: String,
-  campusName: String,
-  creatorID: String,
-  creatorName: String,
-  leaderID: String,
-  leaderFirstName: String,
-  leaderLastName: String,
-  name: String,
-  description: String,
-  image: String,
-  areaID: String,
-  areaName: String,
-  active: Boolean
-});
-
-
 exports.all = function(){
   return [{
     'icon': 'avatar2.jpg',
@@ -31,6 +8,7 @@ exports.all = function(){
     'needDate': '10/22/2015',
     'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
     'area': 'lawncare',
+    'abillity': 'some abillity',
     'dateDelta': 'Yesterday',
     'distanceDelta': '1.5 miles'
   },{
@@ -40,6 +18,7 @@ exports.all = function(){
     'needDate': '10/22/2015',
     'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
     'area': 'lawncare',
+    'abillity': 'some abillity',
     'dateDelta': 'Yesterday',
     'distanceDelta': '1.5 miles'
   },{
@@ -49,6 +28,7 @@ exports.all = function(){
     'needDate': '10/22/2015',
     'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
     'area': 'lawncare',
+    'abillity': 'some abillity',
     'dateDelta': 'Yesterday',
     'distanceDelta': '1.5 miles'
   },{
@@ -58,6 +38,7 @@ exports.all = function(){
     'needDate': '10/22/2015',
     'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
     'area': 'lawncare',
+    'abillity': 'some abillity',
     'dateDelta': 'Yesterday',
     'distanceDelta': '1.5 miles'
   },{
@@ -67,6 +48,7 @@ exports.all = function(){
     'needDate': '10/22/2015',
     'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
     'area': 'lawncare',
+    'abillity': 'some abillity',
     'dateDelta': 'Yesterday',
     'distanceDelta': '1.5 miles'
   }]

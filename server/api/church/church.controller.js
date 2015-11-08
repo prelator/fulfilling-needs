@@ -10,11 +10,11 @@
 'use strict';
 
 var _ = require('lodash');
-var Group = require('./group.model');
+var Church = require('./church.model');
 
 // Get list of things
 exports.index = function(req, res) {
-  return res.status(200).json(Group.all());
+  return res.status(200).json(Church.all());
 };
 
 // Get a single thing

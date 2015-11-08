@@ -13,6 +13,7 @@ angular.module('fulfillingNeedsApp')
         },
         data: {
           title: 'My Community'
-        }
+        },
+        authenticate: true
       });
   });
