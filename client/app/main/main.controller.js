@@ -18,6 +18,20 @@ angular.module('fulfillingNeedsApp')
       console.log(error);
     });
 
+    apiService.getGroupRequests().then(function(response) {
+      var listGroups = {};
+      console.log(response);
+      $scope.data.groupRequests = response;
+      for(var request in response){
+        console.log(request);
+        listGroups[request.group] = 0;
+      }
+      console.log(listGroups);
+      $scope.data.groupRequestList = Object.keys(listGroups);
+    }, function(error){
+      console.log(error);
+    });
+
     // Sample API call
     apiService.getGroups().then(function (response) {
       console.log(response);

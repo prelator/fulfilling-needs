@@ -1,7 +1,11 @@
 <!-- GROUP NEEDS -->
 <div id="tab-default-2" class="slds-tabs__content slds-show" role="tabpanel">
   <ul id="need-list" class="slds-list--vertical slds-has-cards">
-    <div class="slds-card">
+
+<div ng-repeat="request in data.groupRequestList">{{request.group}}</div>
+
+    <div class="slds-card" >
+
       <div class="slds-card__header slds-grid">
         <div class="slds-media slds-media--center slds-has-flexi-truncate">
           <div class="slds-media__figure">

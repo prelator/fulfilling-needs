@@ -16,8 +16,34 @@ angular.module('fulfillingNeedsApp')
           'area': 'lawncare',
           'dateDelta': 'Yesterday',
           'distanceDelta': '1.5 miles'
+        },{
+          'icon': 'avatar2.jpg',
+          'name': 'Mary Server',
+          'needDate': '10/22/2015',
+          'description': 'Does anyone know of a good dog groomer?',
+          'area': 'pet care',
+          'dateDelta': 'Yesterday',
+          'distanceDelta': '1.5 miles'
         }],
-        'group': [{}],
+        'group': [{
+          'icon': 'avatar1.jpg',
+          'name': 'John One',
+          'needDate': '10/22/2015',
+          'description': 'I need ride to the doctors on tuesday',
+          'area': 'travel',
+          'group': 'worship team',
+          'dateDelta': 'Yesterday',
+          'distanceDelta': '.5 miles'
+        },{
+          'icon': 'avatar3.jpg',
+          'name': 'Mike Two',
+          'needDate': '10/22/2015',
+          'description': 'I want to learn how to go backpacking without getting eatin',
+          'area': 'recreation',
+          'group': 'small group',
+          'dateDelta': 'Yesterday',
+          'distanceDelta': '.5 miles'
+        }],
         'church': [{}],
         'community': [{}]
       },
@@ -91,6 +117,8 @@ angular.module('fulfillingNeedsApp')
       //api/groups/:group_id/requests
       getGroupRequests: function(group_id) {
         var deferred = $q.defer();
+        //faking a return
+        deferred.resolve(mockObject.requests.group);
 
         $http({
           method: 'GET',
