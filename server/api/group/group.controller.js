@@ -14,7 +14,10 @@ var Group = require('./group.model');
 
 // Get list of things
 exports.index = function(req, res) {
-  return res.status(200).json(Group.all());
+  Group.find(function (err, group) {
+    if(err) { return handleError(res, err); }
+    return res.status(200).json(group);
+  });
 };
 
 // Get a single thing
