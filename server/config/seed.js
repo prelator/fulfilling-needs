@@ -131,53 +131,23 @@ Request.find({}).remove(function() {
 Service.find({}).remove(function() {
   Service.create({
     'icon': 'avatar2.jpg',
-    'name': 'Mary Server',
-    'group': 'All Chruch Members Worship Team',
-    'needDate': '10/22/2015',
-    'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
-    'area': 'lawncare',
-    'abillity': 'some abillity',
-    'dateDelta': 'Yesterday',
+    'name': 'Tonya Jones',
+    'userID': 1,
+    'group': 'All Church Members',
+    'needDate': '11/08/2015',
+    'description': "Sink broke, but won't be paid for three weeks. Know anyone who can help now but is flexible on payment terms?",
+    'area': 'Construction - Plumbing',
+    'dateDelta': 'Today',
     'distanceDelta': '1.5 miles'
   },{
     'icon': 'avatar2.jpg',
-    'name': 'Mary Server',
-    'group': 'Group Name',
-    'needDate': '10/22/2015',
-    'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
-    'area': 'lawncare',
-    'abillity': 'some abillity',
-    'dateDelta': 'Yesterday',
-    'distanceDelta': '1.5 miles'
-  },{
-    'icon': 'avatar2.jpg',
-    'name': 'Mary Server',
-    'group': 'Group Name',
-    'needDate': '10/22/2015',
-    'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
-    'area': 'lawncare',
-    'abillity': 'some abillity',
-    'dateDelta': 'Yesterday',
-    'distanceDelta': '1.5 miles'
-  },{
-    'icon': 'avatar2.jpg',
-    'name': 'Mary Server',
-    'group': 'Group Name',
-    'needDate': '10/22/2015',
-    'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
-    'area': 'lawncare',
-    'abillity': 'some abillity',
-    'dateDelta': 'Yesterday',
-    'distanceDelta': '1.5 miles'
-  },{
-    'icon': 'avatar2.jpg',
-    'name': 'Mary Server',
-    'group': 'Group Name',
-    'needDate': '10/22/2015',
-    'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
-    'area': 'lawncare',
-    'abillity': 'some abillity',
-    'dateDelta': 'Yesterday',
+    'name': 'Tonya Jones',
+    'userID': 1,
+    'group': 'Worship Team',
+    'needDate': '11/09/2015',
+    'description': "Our heater blew up! No joke! And it's almost winter. Not good. How do we get this fixed fast?",
+    'area': 'Construction - Heating',
+    'dateDelta': 'Tomorrow',
     'distanceDelta': '1.5 miles'
   }, function() {
       console.log('Finished Seeding Services');
