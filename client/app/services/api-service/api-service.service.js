@@ -3,6 +3,16 @@
 angular.module('fulfillingNeedsApp')
   .service('apiService', function ($http, $q) {
 
+    var mockObject = {
+      'summary': {'counts':{'user':1, 'group':3, 'church':40, 'community':1000, 'abilities':5}},
+      'requests': {
+        'users': [{}],
+        'group': [{}],
+        'church': [{}],
+        'community': [{}]
+      }
+    }
+
     return {
 
       getGroups: function() {
@@ -179,6 +189,26 @@ angular.module('fulfillingNeedsApp')
         $http({
           method: 'GET',
           url: '/api/master/abilities/' + ability_id
+        }).then(function successCallback(response) {
+            deferred.resolve(response.data);
+          }, function errorCallback(response) {
+            deferred.reject(response);
+          });
+
+        return deferred.promise;
+      },
+
+      //api/requests/totals
+      getSummaryData: function() {
+
+        var deferred = $q.defer();
+
+        //faking a return
+        deferred.resolve(mockObject.summary);
+
+        $http({
+          method: 'GET',
+          url: '/api/requests/totals'
         }).then(function successCallback(response) {
             deferred.resolve(response.data);
           }, function errorCallback(response) {
