@@ -1,3 +1,5 @@
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
 <div class="slds-media slds-tile slds-box slds slds-m-bottom--small slds-theme--default">
   <div class="slds-media__figure">
     <img class="slds-avatar slds-avatar--medium" src="../bower_components/salesforce-lightning-design-system/assets/images/{{request.icon}}" alt=""/>
@@ -18,7 +20,7 @@
   </div>
   <div class="slds-no-flex">
     <div class="slds-button-group">
-      <button ng-show="request.userID==2" class="slds-button slds-button--icon-border-filled slds-button--small slds-avatar slds-avatar--medium" onclick="$('.slds-media .slds-tile .slds-box').eq(0).remove()">
+      <button ng-show="request.userID==2" class="slds-button slds-button--icon-border-filled slds-button--small slds-avatar slds-avatar--medium" onclick="$(this).parent().parent().parent().parent().remove()">
         <img src="../bower_components/salesforce-lightning-design-system/assets/icons/utility/success_60.png" class="slds-button__icon slds-button__icon--large">
         <span class="slds-assistive-text">Show More</span>
         <!--Accept-->
@@ -40,3 +42,10 @@
     </div>
   </div>
 </div>
+<script type="text/javascript">
+function removeMe(){
+  console.log('Removing tile')
+  $('.slds-media .slds-tile .slds-box').eq(0).remove()
+}
+
+</script>

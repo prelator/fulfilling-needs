@@ -21,6 +21,7 @@ exports.create = function(req, res) {
     payload: req.body,
     to: req.body.to
   }, { depth: null }));
+
   var email = new sendgrid.Email();
 
   email.addTo(req.body.to);
