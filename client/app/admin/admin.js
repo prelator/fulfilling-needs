@@ -10,6 +10,7 @@ angular.module('fulfillingNeedsApp')
             templateUrl: 'app/admin/admin.html',
             controller: 'AdminCtrl'
           }
-        }
+        },
+        authenticate: true
       });
   });
