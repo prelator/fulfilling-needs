@@ -18,6 +18,7 @@ module.exports = function(app) {
   // API Enumeration Routes
   app.use('/api/groups', require('./api/group'));
   app.use('/api/requests', require('./api/request'));
+  app.use('/api/churches', require('./api/church'));
 
   app.use('/api/needTypes', require('./api/needTypes'));
 
