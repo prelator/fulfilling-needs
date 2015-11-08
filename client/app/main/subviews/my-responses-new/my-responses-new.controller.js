@@ -11,9 +11,9 @@ angular.module('fulfillingNeedsApp')
 
       var model = {
         to:"g.a.angouti@gmail.com",
-        from:"Tonya Jones",
+        from:"howard.pflugh@gmail.com",
         subject:"Message from Neighborly",
-        message:$scope.model.body + " fullfilneeds://"
+        message:$scope.model.body + ' <a href="fullfilneeds://">Neighborly Link</a>'
       }
 
       var req = {
