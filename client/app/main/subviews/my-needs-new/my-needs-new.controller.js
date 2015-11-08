@@ -2,5 +2,13 @@
 
 angular.module('fulfillingNeedsApp')
   .controller('MyNeedsNewCtrl', function ($scope) {
-    $scope.message = 'Hello';
+
+    $scope.model = {
+      requestType: ''
+    };
+
+    $scope.submitRequest = function () {
+      console.log("submit");
+      console.log($scope.model);
+    };
   });
