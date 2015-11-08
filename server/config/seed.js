@@ -7,7 +7,7 @@
 
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
-var Group = require('../api/group/group.model');
+//var Group = require('../api/group/group.model');
 
 Thing.find({}).remove(function() {
   Thing.create({
@@ -49,76 +49,76 @@ User.find({}).remove(function() {
   );
 });
 
-Group.find({}).remove(function() {
-  Group.create({
-    groupID: 1,
-    groupTypeID: 2,
-    groupTypeName: "Ministry Team",
-    campusID: 1,
-    campusName: "Main Campus",
-    creatorID: 220,
-    creatorName: "Leann Johnson",
-    name: "Test Group 01",
-    description: "This is a test group",
-    image: "https://s3.amazonaws.com/ccbchurch/10622/pics/g_51?AWSAccessKeyId=AKIAJ4CISARDRJPE4ERQ&Expires=1446880637&Signature=HoJpE37R%2BezgSAZG%2FuHwWogH2U0%3D",
-    areaID: 1,
-    areaName: "At Vanguard",
-    active: true
-  }, {
-    id: 2,
-    groupTypeID: 2,
-    groupTypeName: "Ministry Team",
-    campusID: 1,
-    campusName: "Main Campus",
-    creatorID: 220,
-    creatorName: "Leann Johnson",
-    name: "Test Group 01",
-    description: "This is a test group",
-    image: "https://s3.amazonaws.com/ccbchurch/10622/pics/g_51?AWSAccessKeyId=AKIAJ4CISARDRJPE4ERQ&Expires=1446880637&Signature=HoJpE37R%2BezgSAZG%2FuHwWogH2U0%3D",
-    areaID: 1,
-    areaName: "At Vanguard",
-    active: true
-  }, {
-    id: 3,
-    groupTypeID: 2,
-    groupTypeName: "Ministry Team",
-    campusID: 1,
-    campusName: "Main Campus",
-    creatorID: 220,
-    creatorName: "Leann Johnson",
-    name: "Test Group 01",
-    description: "This is a test group",
-    image: "https://s3.amazonaws.com/ccbchurch/10622/pics/g_51?AWSAccessKeyId=AKIAJ4CISARDRJPE4ERQ&Expires=1446880637&Signature=HoJpE37R%2BezgSAZG%2FuHwWogH2U0%3D",
-    areaID: 1,
-    areaName: "At Vanguard",
-    active: true
-  },  {
-    id: 4,
-    groupTypeID: 2,
-    groupTypeName: "Ministry Team",
-    campusID: 1,
-    campusName: "Main Campus",
-    creatorID: 220,
-    creatorName: "Leann Johnson",
-    name: "Test Group 01",
-    description: "This is a test group",
-    image: "https://s3.amazonaws.com/ccbchurch/10622/pics/g_51?AWSAccessKeyId=AKIAJ4CISARDRJPE4ERQ&Expires=1446880637&Signature=HoJpE37R%2BezgSAZG%2FuHwWogH2U0%3D",
-    areaID: 1,
-    areaName: "At Vanguard",
-    active: true
-  },  {
-    id: 5,
-    groupTypeID: 2,
-    groupTypeName: "Ministry Team",
-    campusID: 1,
-    campusName: "Main Campus",
-    creatorID: 220,
-    creatorName: "Leann Johnson",
-    name: "Test Group 01",
-    description: "This is a test group",
-    image: "https://s3.amazonaws.com/ccbchurch/10622/pics/g_51?AWSAccessKeyId=AKIAJ4CISARDRJPE4ERQ&Expires=1446880637&Signature=HoJpE37R%2BezgSAZG%2FuHwWogH2U0%3D",
-    areaID: 1,
-    areaName: "At Vanguard",
-    active: true
-  });
-});
+// Group.find({}).remove(function() {
+//   Group.create({
+//     groupID: 1,
+//     groupTypeID: 2,
+//     groupTypeName: "Ministry Team",
+//     campusID: 1,
+//     campusName: "Main Campus",
+//     creatorID: 220,
+//     creatorName: "Leann Johnson",
+//     name: "Test Group 01",
+//     description: "This is a test group",
+//     image: "https://s3.amazonaws.com/ccbchurch/10622/pics/g_51?AWSAccessKeyId=AKIAJ4CISARDRJPE4ERQ&Expires=1446880637&Signature=HoJpE37R%2BezgSAZG%2FuHwWogH2U0%3D",
+//     areaID: 1,
+//     areaName: "At Vanguard",
+//     active: true
+//   }, {
+//     id: 2,
+//     groupTypeID: 2,
+//     groupTypeName: "Ministry Team",
+//     campusID: 1,
+//     campusName: "Main Campus",
+//     creatorID: 220,
+//     creatorName: "Leann Johnson",
+//     name: "Test Group 01",
+//     description: "This is a test group",
+//     image: "https://s3.amazonaws.com/ccbchurch/10622/pics/g_51?AWSAccessKeyId=AKIAJ4CISARDRJPE4ERQ&Expires=1446880637&Signature=HoJpE37R%2BezgSAZG%2FuHwWogH2U0%3D",
+//     areaID: 1,
+//     areaName: "At Vanguard",
+//     active: true
+//   }, {
+//     id: 3,
+//     groupTypeID: 2,
+//     groupTypeName: "Ministry Team",
+//     campusID: 1,
+//     campusName: "Main Campus",
+//     creatorID: 220,
+//     creatorName: "Leann Johnson",
+//     name: "Test Group 01",
+//     description: "This is a test group",
+//     image: "https://s3.amazonaws.com/ccbchurch/10622/pics/g_51?AWSAccessKeyId=AKIAJ4CISARDRJPE4ERQ&Expires=1446880637&Signature=HoJpE37R%2BezgSAZG%2FuHwWogH2U0%3D",
+//     areaID: 1,
+//     areaName: "At Vanguard",
+//     active: true
+//   },  {
+//     id: 4,
+//     groupTypeID: 2,
+//     groupTypeName: "Ministry Team",
+//     campusID: 1,
+//     campusName: "Main Campus",
+//     creatorID: 220,
+//     creatorName: "Leann Johnson",
+//     name: "Test Group 01",
+//     description: "This is a test group",
+//     image: "https://s3.amazonaws.com/ccbchurch/10622/pics/g_51?AWSAccessKeyId=AKIAJ4CISARDRJPE4ERQ&Expires=1446880637&Signature=HoJpE37R%2BezgSAZG%2FuHwWogH2U0%3D",
+//     areaID: 1,
+//     areaName: "At Vanguard",
+//     active: true
+//   },  {
+//     id: 5,
+//     groupTypeID: 2,
+//     groupTypeName: "Ministry Team",
+//     campusID: 1,
+//     campusName: "Main Campus",
+//     creatorID: 220,
+//     creatorName: "Leann Johnson",
+//     name: "Test Group 01",
+//     description: "This is a test group",
+//     image: "https://s3.amazonaws.com/ccbchurch/10622/pics/g_51?AWSAccessKeyId=AKIAJ4CISARDRJPE4ERQ&Expires=1446880637&Signature=HoJpE37R%2BezgSAZG%2FuHwWogH2U0%3D",
+//     areaID: 1,
+//     areaName: "At Vanguard",
+//     active: true
+//   });
+// });
