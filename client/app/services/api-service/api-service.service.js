@@ -29,7 +29,7 @@ angular.module('fulfillingNeedsApp')
           'communityRadius':50 //miles
         }
       }
-    }
+    };
 
     return {
 
@@ -39,6 +39,29 @@ angular.module('fulfillingNeedsApp')
         $http({
           method: 'GET',
           url: '/api/groups'
+        }).then(function successCallback(response) {
+            // this callback will be called asynchronously
+            // when the response is available
+
+            // Resolve the promise with the response data
+            deferred.resolve(response.data);
+          }, function errorCallback(response) {
+            // called asynchronously if an error occurs
+            // or server returns response with an error status.
+
+            // Reject the promise with the response
+            deferred.reject(response);
+          });
+
+        return deferred.promise;
+      },
+
+      getNeedTypes: function() {
+        var deferred = $q.defer();
+
+        $http({
+          method: 'GET',
+          url: '/api/needTypes'
         }).then(function successCallback(response) {
             // this callback will be called asynchronously
             // when the response is available
