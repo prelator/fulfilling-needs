@@ -102,7 +102,27 @@ Request.find({}).remove(function() {
     'area': 'Pro - Career Counseling',
     'dateDelta': 'This Month',
     'distanceDelta': '2.5 miles'
-  }, function() {
+  }, {
+    'icon': 'avatar3.jpg',
+    'name': '',
+    'userID': 3,
+    'group': "All Church Members",
+    'needDate': '10/14/2015',
+    'description': "Several months ago, I hurt my back. The pain went away, but it recently came back with a vengeance. Do any of you know a good doctor to talk to about my chronic back pain?",
+    'area': 'Pro - Career Counseling',
+    'dateDelta': '3 Weeks Ago',
+    'distanceDelta': '1.5 miles'
+  }, {
+    'icon': 'avatar2.jpg',
+    'name': '',
+    'userID': 2,
+    'group': "Worship Team",
+    'needDate': '11/08/2015',
+    'description': "My daughter is having a touch time in school, and I don't know how to support her. We are having a tough time connecting and I'm afraid I'm hurting her rather than helping.",
+    'area': 'Pro - Counseling',
+    'dateDelta': 'Today',
+    'distanceDelta': '3.5 miles'
+  },function() {
       console.log('Finished Seeding Requests');
     }
   );
