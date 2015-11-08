@@ -1,39 +1,36 @@
-<div class="bootstrap">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <h1>Change Password</h1>
-      </div>
-      <div class="col-sm-12">
-        <form class="form" name="form" ng-submit="changePassword(form)" novalidate>
-
-          <div class="form-group">
-            <label>Current Password</label>
-
-            <input type="password" name="password" class="form-control" ng-model="user.oldPassword"
-                   mongoose-error/>
-            <p class="help-block" ng-show="form.password.$error.mongoose">
-                {{ errors.other }}
-            </p>
+<div class="slds">
+  <div>
+      <form class="form" name="form" ng-submit="changePassword(form)" novalidate>
+        <div class="slds-modal__container slds-box">
+          <div class="slds-modal__header">
+            <h2 class="slds-text-heading--medium">Change Password</h2>
           </div>
-
-          <div class="form-group">
-            <label>New Password</label>
-
-            <input type="password" name="newPassword" class="form-control" ng-model="user.newPassword"
-                   ng-minlength="3"
-                   required/>
-            <p class="help-block"
-               ng-show="(form.newPassword.$error.minlength || form.newPassword.$error.required) && (form.newPassword.$dirty || submitted)">
-              Password must be at least 3 characters.
-            </p>
+          <div class="slds-modal__content">
+            <div class="slds-form-element">
+              <label class="slds-form-element__label" for="oldPassword">Old Password</label>
+              <div class="slds-form-element__control">
+                <input id="oldPassword" type="password" name="password" class="slds-input" ng-model="user.oldPassword" mongoose-error/>
+                <p class="help-block" ng-show="form.password.$error.mongoose">{{ errors.other }}</p>
+              </div>
+            </div>
+            <div class="slds-form-element">
+              <label class="slds-form-element__label" for="newPassword">New Password</label>
+              <div class="slds-form-element__control">
+                <input id="newPassword" type="password" name="newPassword" class="slds-input" ng-model="user.newPassword" ng-minlength="3" required/>
+                <p class="help-block"
+                   ng-show="(form.newPassword.$error.minlength || form.newPassword.$error.required) && (form.newPassword.$dirty || submitted)">
+                  Password must be at least 3 characters.
+                </p>
+                <p class="help-block"> {{ message }} </p>
+              </div>
+            </div>
           </div>
-
-          <p class="help-block"> {{ message }} </p>
-
-          <button class="btn btn-lg btn-primary" type="submit">Save changes</button>
-        </form>
-      </div>
-    </div>
+          <div class="slds-modal__footer">
+            <button class="slds-button slds-button--neutral slds-button--brand" type="submit">Save Changes</button>
+            <a class="slds-button slds-button--neutral" href="/">Home</a>
+          </div>
+        </div>
+      </form>   
   </div>
+</div>
 </div>

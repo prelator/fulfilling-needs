@@ -1,12 +1,39 @@
-<div class="bootstrap">
-  <div class="container">
-    <p>The delete user and user index api routes are restricted to users with the 'admin' role.</p>
-    <ul class="list-group">
-      <li class="list-group-item" ng-repeat="user in users">
-          <strong>{{user.name}}</strong><br>
-          <span class="text-muted">{{user.email}}</span>
-          <a ng-click="delete(user)" class="trash"><span class="glyphicon glyphicon-trash pull-right"></span></a>
-      </li>
-    </ul>
+<div class="slds">
+<div class="slds-card">
+  <div class="slds-card__header slds-grid">
+    <div class="slds-media slds-media--center slds-has-flexi-truncate">
+      <div class="slds-media__body">
+        <h2 class="slds-text-heading--small slds-truncate">Manage Users</h2>
+      </div>
+    </div>
+    <div class="slds-no-flex">
+      <div class="slds-button-group">
+        <a class="slds-button slds-button--neutral slds-button--small" href="/">Home</a>
+      </div>
+    </div>
   </div>
+  <div class="slds-card__body">
+    <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal slds-no-row-hover">
+      <thead>
+        <tr>
+          <th class="slds-text-heading--label slds-size--1-of-4" scope="col">Name</th>
+          <th class="slds-text-heading--label slds-size--1-of-4" scope="col">Email</th>
+          <th class="slds-text-heading--label slds-size--1-of-4" scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="slds-hint-parent" ng-repeat="user in users">
+          <td class="slds-size--1-of-4" data-label="Name">{{user.name}}</td>
+          <td class="slds-size--1-of-4" data-label="Email">{{user.email}}</td>
+          <td>
+              <button class="slds-button slds-button--icon-border-filled slds-button--small slds-avatar" ng-click="delete(user)">
+                <img src="../assets/SLDS0110/assets/icons/utility/delete_60.png" class="slds-button__icon slds-button__icon--large">
+              </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="slds-card__footer"></div>
+</div>
 </div>
