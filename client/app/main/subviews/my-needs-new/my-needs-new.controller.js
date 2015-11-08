@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('fulfillingNeedsApp')
-  .controller('MyNeedsNewCtrl', function ($scope, $http) {
+  .controller('MyNeedsNewCtrl', function ($scope, $http, $location) {
 
     $scope.model = {
       requestType: ''
@@ -33,7 +33,7 @@ angular.module('fulfillingNeedsApp')
 
       $http(req).then(
         function(){
-          window.reload();
+         $location.path("/my-needs");
           console.log('success');
         },
         function(){
