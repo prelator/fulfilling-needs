@@ -1,5 +1,21 @@
 'use strict';
 
+var mongoose = require('mongoose'),
+    Schema = mongoose.Schema;
+
+var RequestSchema = new Schema({
+  icon: String,
+  name: String,
+  group: String,
+  needDate: String,
+  description: String,
+  area: String,
+  dateDelta: String,
+  distanceDelta: String,
+});
+
+module.exports = mongoose.model('Request', RequestSchema);
+
 exports.all = function(){
   return [{
     'icon': 'avatar2.jpg',
