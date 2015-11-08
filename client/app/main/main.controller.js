@@ -20,9 +20,19 @@ angular.module('fulfillingNeedsApp')
 
     // Sample API call
     apiService.getGroups().then(function (response) {
-      console.log(response);
+
     }, function (error) {
       console.log(error);
+    });
+
+    apiService.getNeedTypes().then(function (response) {
+      var typeList = [];
+      for (var i = 0; i < response.length; i++) {
+        typeList.push({label: response[i]});
+      }
+      $scope.data.needTypes = typeList;
+    }, function (response) {
+      
     });
 
     $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {

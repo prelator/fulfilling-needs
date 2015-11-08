@@ -1,7 +1,7 @@
 <!--FORM: NEW NEED-->
 <div class="slds-box slds-m-vertical--small">
 	<h3 class="slds-text-heading--small">New Need</h3>
-	<form role="form" class="slds-form--stacked slds-grid slds-wrap slds-m-top--large">
+	<form role="form" class="slds-form--stacked slds-grid slds-wrap slds-m-top--large" ng-submit="submitRequest()">
 		<div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1">
 
 			<!--NeedRequestedBy-->
@@ -15,7 +15,7 @@
 			<div class="slds-form-element">
 				<label class="slds-form-element__label" for="need_group">Group</label>
 				<div class="slds-form-element__control">
-					<select id="need_group" class="slds-select">
+					<select id="need_group" class="slds-select" ng-model="model.needGroup">
 						<option>Worship Team</option>
 						<option>Small Group</option>
 						<option>Underwater Basketweavers</option>
@@ -23,7 +23,15 @@
 				</div>
 			</div>
 			<!--NeedType-->
-			<div class="slds-lookup" data-select="multi" data-scope="single" data-typeahead="true">
+      <div class="slds-form-element">
+        <label class="slds-form-element__label" for="need_type">Need Type</label>
+        <div class="slds-form-element__control">
+          <select id="need_type" class="slds-select" ng-options="type.label for type in data.needTypes" ng-model="model.requestType" placeholder="Select a request tyle">
+          <option value="" disabled selected>Select your option</option>
+          </select>
+        </div>
+      </div>
+			<!-- <div class="slds-lookup" data-select="multi" data-scope="single">
 			  <div class="slds-form-element">
 			    <label class="slds-form-element__label" for="lookup">Need Type</label>
 			    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right">
@@ -31,7 +39,7 @@
 			      <input id="lookup" class="slds-input" type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder="Enter your need here"/>
 			    </div>
 			  </div>
-			  <div class="slds-lookup__menu" role="listbox"><!--DON'T HIDE FOREVER!-->
+			  <div class="slds-lookup__menu" role="listbox">
 			    <ul class="slds-lookup__list" role="presentation">
 			      <li class="slds-lookup__item">
 			        <a id="s01" href="#" role="option">Construction - A/C</a>
@@ -44,12 +52,12 @@
 			      </li>
 			    </ul>
 			  </div>
-			</div>
+			</div> -->
 			<!--NeedDescription-->
 			<div class="slds-form-element">
 			  <label class="slds-form-element__label" for="need_description">Description</label>
 			  <div class="slds-form-element__control">
-			    <textarea id="need_description" class="slds-textarea" style="min-height:150px;" placeholder="Describe your need here."></textarea>
+			    <textarea id="need_description" class="slds-textarea" style="min-height:150px;" placeholder="Describe your need here." ng-model="model.description"></textarea>
 			  </div>
 			</div>
 			<!--NeedDate-->
@@ -58,7 +66,7 @@
 			    <div class="slds-form-element__control">
 			      <div class="slds-input-has-icon slds-input-has-icon--right">
 				  	  <img src="../bower_components/salesforce-lightning-design-system/assets/icons/utility/event_60.png" class="slds-input__icon slds-icon-text-default">
-			        <input id="date" class="slds-input" type="text" placeholder="Pick a Date" label="Date Picker Label" />
+			        <input id="date" class="slds-input" type="text" placeholder="Pick a Date" label="Date Picker Label" ng-model="model.date" />
 			      </div>
 			    </div>
 			  </div>
@@ -235,13 +243,13 @@
 			<div class="slds-form-element">
 			  <label class="slds-form-element__label" for="need_zip_code">ZIP Code</label>
 			  <div class="slds-form-element__control">
-			    <input id="need_zip_code" class="slds-input" type="text" placeholder="Zip Code" />
+			    <input id="need_zip_code" class="slds-input" type="text" placeholder="Zip Code" ng-model="model.zip"/>
 			  </div>
 			</div>
 			<!--Actions-->
 			<section class="slds-clearfix slds-m-top--medium">
 					<div class="slds-float--right slds-button-group" role="group">
-					<button class="slds-button slds-button--brand">Submit</button>
+					<button type="submit" class="slds-button slds-button--brand">Submit</button>
 					<a class="slds-button slds-button--neutral" href="/my-needs">Cancel</a>
 				</div>
 			</section>
