@@ -12,7 +12,7 @@ angular.module('fulfillingNeedsApp')
           }
         },
         data: {
-          title: 'My Abilities'
+          title: 'My Service Areas'
         }
       });
   });
