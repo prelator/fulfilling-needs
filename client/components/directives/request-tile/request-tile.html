@@ -18,15 +18,24 @@
   </div>
   <div class="slds-no-flex">
     <div class="slds-button-group">
-      <button class="slds-button slds-button--icon-border-filled slds-button--small slds-avatar slds-avatar--medium">
+      <button ng-show="request.userID==2" class="slds-button slds-button--icon-border-filled slds-button--small slds-avatar slds-avatar--medium">
         <img src="../bower_components/salesforce-lightning-design-system/assets/icons/utility/success_60.png" class="slds-button__icon slds-button__icon--large">
         <span class="slds-assistive-text">Show More</span>
         <!--Accept-->
       </button>
-      <button class="slds-button slds-button--icon-border-filled slds-button--small slds-avatar slds-avatar--medium">
+      <button ng-show="request.userID==2" class="slds-button slds-button--icon-border-filled slds-button--small slds-avatar slds-avatar--medium">
         <img src="../bower_components/salesforce-lightning-design-system/assets/icons/utility/clear_60.png" class="slds-button__icon slds-button__icon--large">
         <span class="slds-assistive-text">Show More</span>
         <!--Reject-->
+      </button>
+    </div>
+    <div class="slds-button-group">
+      <button ng-hide="request.userID==2" class="slds-button slds-button--icon-border-filled slds-button--small slds-avatar slds-avatar--medium">
+        <a href="/my-responses-new">
+        <img src="../bower_components/salesforce-lightning-design-system/assets/icons/utility/chat_60.png" class="slds-button__icon slds-button__icon--large">
+        <span class="slds-assistive-text">Show More</span>
+        <!--Respond-->
+        </a>
       </button>
     </div>
   </div>
