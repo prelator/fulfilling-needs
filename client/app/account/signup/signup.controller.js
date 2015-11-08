@@ -16,7 +16,7 @@ angular.module('fulfillingNeedsApp')
         })
         .then( function() {
           // Account created, redirect to home
-          $location.path('/');
+          $location.path('/user-setup');
         })
         .catch( function(err) {
           err = err.data;
