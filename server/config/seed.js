@@ -36,15 +36,15 @@ var Group = require('../api/group/group.model');
 User.find({}).remove(function() {
   User.create({
     provider: 'local',
-    name: 'Test User',
-    email: 'test@test.com',
-    password: 'test'
+    name: 'Tonya Jones',
+    email: 'tonyajones@gmail.com',
+    password: 'password'
   }, {
     provider: 'local',
-    role: 'admin',
-    name: 'Admin',
-    email: 'admin@admin.com',
-    password: 'admin'
+    role: 'Brian',
+    name: 'Ferris',
+    email: 'brianfarris@gmail.com',
+    password: 'password'
   }, function() {
       console.log('Finished Seeding Users');
     }
@@ -53,69 +53,76 @@ User.find({}).remove(function() {
 
 Request.find({}).remove(function() {
   Request.create({
-    'icon': 'avatar2.jpg',
-    'name': 'Mary Server',
-    'group': 'All Chruch Members Worship Team',
+    'icon': 'avatar1.jpg',
+    'name': '',
+    'userID': 1,
+    'group': 'All Church Members',
     'needDate': '11/22/2015',
-    'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
-    'area': 'lawncare',
-    'dateDelta': 'Yesterday',
+    'description': 'My wife needs a carpooler to get into town.',
+    'area': 'General - Transportation',
+    'dateDelta': 'This Month',
     'distanceDelta': '0.5 miles'
   }, {
     'icon': 'avatar2.jpg',
-    'name': 'Mary Server',
-    'group': 'Berkley Small Group',
-    'needDate': '11/12/2015',
-    'description': 'I need help cleaning my house.',
-    'area': 'house-cleaning',
+    'name': '',
+    'userID': 2,
+    'group': 'Worship Team',
+    'needDate': '11/13/2015',
+    'description': 'Could somebody from our group watch Johnny on Friday Night? We want to make it to the Star Wars premier.',
+    'area': 'General - Child Care',
+    'dateDelta': 'This Week',
+    'distanceDelta': '1.5 miles'
+  }, {
+    'icon': 'avatar3.jpg',
+    'name': '',
+    'userID': 3,
+    'group': 'Celebrate Recovery',
+    'needDate': '11/22/2015',
+    'description': 'My wife needs a carpooler to get into town.',
+    'area': 'General - Transportation',
+    'dateDelta': 'This Month',
+    'distanceDelta': '0.5 miles'
+  }, {
+    'icon': 'avatar1.jpg',
+    'name': '',
+    'userID': 1,
+    'group': 'Berkeley Small Group',
+    'needDate': '11/07/2015',
+    'description': 'A neighbor of ours recently lost his wife. Does anyone have some free time to pitch in a meal?',
+    'area': 'General - Food Service',
     'dateDelta': 'Yesterday',
+    'distanceDelta': '2.5 miles'
+  }, {
+    'icon': 'avatar2.jpg',
+    'name': '',
+    'userID': 2,
+    'group': "Doubter's Club",
+    'needDate': '11/24/2015',
+    'description': "I've been looking for a job for a few months but had no bites. Could someone help me look over my resume?",
+    'area': 'Pro - Career Counseling',
+    'dateDelta': 'This Month',
+    'distanceDelta': '2.5 miles'
+  }, {
+    'icon': 'avatar3.jpg',
+    'name': '',
+    'userID': 3,
+    'group': "All Church Members",
+    'needDate': '10/14/2015',
+    'description': "Several months ago, I hurt my back. The pain went away, but it recently came back with a vengeance. Do any of you know a good doctor to talk to about my chronic back pain?",
+    'area': 'Pro - Career Counseling',
+    'dateDelta': '3 Weeks Ago',
     'distanceDelta': '1.5 miles'
   }, {
     'icon': 'avatar2.jpg',
-    'name': 'Mary Server',
-    'group': 'Doubters Club',
-    'needDate': '11/13/2015',
-    'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
-    'area': 'lawncare',
-    'dateDelta': 'Yesterday',
-    'distanceDelta': '2 miles'
-  }, {
-    'icon': 'avatar2.jpg',
-    'name': 'Mary Server',
-    'group': 'All Chruch Members Worship Team',
-    'needDate': '11/18/2015',
-    'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
-    'area': 'lawncare',
-    'dateDelta': 'Yesterday',
-    'distanceDelta': '2.5 miles'
-  }, {
-    'icon': 'avatar2.jpg',
-    'name': 'Mary Server',
-    'group': 'All Chruch Members Worship Team',
-    'needDate': '11/21/2015',
-    'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
-    'area': 'lawncare',
-    'dateDelta': 'Yesterday',
-    'distanceDelta': '2 miles'
-  }, {
-    'icon': 'avatar2.jpg',
-    'name': 'Mary Server',
-    'group': 'All Chruch Members Worship Team',
-    'needDate': '11/22/2015',
-    'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
-    'area': 'lawncare',
-    'dateDelta': 'Yesterday',
-    'distanceDelta': '2.5 miles'
-  },{
-    'icon': 'avatar2.jpg',
-    'name': 'Mary Server',
-    'group': 'All Chruch Members Worship Team',
-    'needDate': '12/21/2015',
-    'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
-    'area': 'lawncare',
-    'dateDelta': 'Yesterday',
-    'distanceDelta': '3 miles'
-  }, function() {
+    'name': '',
+    'userID': 2,
+    'group': "Worship Team",
+    'needDate': '11/08/2015',
+    'description': "My daughter is having a touch time in school, and I don't know how to support her. We are having a tough time connecting and I'm afraid I'm hurting her rather than helping.",
+    'area': 'Pro - Counseling',
+    'dateDelta': 'Today',
+    'distanceDelta': '3.5 miles'
+  },function() {
       console.log('Finished Seeding Requests');
     }
   );
@@ -182,13 +189,49 @@ Group.find({}).remove(function() {
   Group.create({
     'icon': 'avatar2.jpg',
     'name': 'Mary Server',
-    'group': 'Group Name',
-    'needDate': '10/22/2015',
-    'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
-    'area': 'lawncare',
-    'dateDelta': 'Yesterday',
-    'distanceDelta': '1.5 miles'
-  }, function() {
+    'group': 'All Church Members',
+    'needDate': '',
+    'description': '',
+    'area': '',
+    'dateDelta': '',
+    'distanceDelta': ''
+  }, {
+    'icon': 'avatar2.jpg',
+    'name': 'Mary Server',
+    'group': 'Worship Team',
+    'needDate': '',
+    'description': '',
+    'area': '',
+    'dateDelta': '',
+    'distanceDelta': ''
+  }, {
+    'icon': 'avatar2.jpg',
+    'name': 'Mary Server',
+    'group': 'Celebrate Recovery',
+    'needDate': '',
+    'description': '',
+    'area': '',
+    'dateDelta': '',
+    'distanceDelta': ''
+  }, {
+    'icon': 'avatar2.jpg',
+    'name': 'Mary Server',
+    'group': 'Berkeley Small Group',
+    'needDate': '',
+    'description': '',
+    'area': '',
+    'dateDelta': '',
+    'distanceDelta': ''
+  }, {
+    'icon': 'avatar2.jpg',
+    'name': 'Mary Server',
+    'group': "Doubter's Club",
+    'needDate': '',
+    'description': '',
+    'area': '',
+    'dateDelta': '',
+    'distanceDelta': ''
+  } ,function() {
       console.log('Finished Seeding Groups');
     }
   );

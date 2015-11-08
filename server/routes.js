@@ -21,6 +21,7 @@ module.exports = function(app) {
   app.use('/api/churches', require('./api/church'));
   app.use('/api/communites', require('./api/community'));
   app.use('/api/services', require('./api/service'));
+  app.use('/api/response', require('./api/response'));
 
   app.use('/api/needTypes', require('./api/needTypes'));
 
