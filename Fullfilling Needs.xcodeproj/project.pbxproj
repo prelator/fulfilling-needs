@@ -47,6 +47,8 @@
 		0523DBB71BEFB4CF006F15B5 /* NeedsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0523DBB51BEFB4CF006F15B5 /* NeedsTableViewCell.swift */; };
 		0523DBB81BEFB4CF006F15B5 /* NeedsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0523DBB61BEFB4CF006F15B5 /* NeedsTableViewCell.xib */; };
 		0523DBBA1BEFBC36006F15B5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0523DBB91BEFBC36006F15B5 /* MapKit.framework */; };
+		05F4ED1C1BEFF9E300D0B839 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F4ED1A1BEFF9E300D0B839 /* Bolts.framework */; };
+		05F4ED1D1BEFF9E300D0B839 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F4ED1B1BEFF9E300D0B839 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +95,8 @@
 		0523DBB51BEFB4CF006F15B5 /* NeedsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedsTableViewCell.swift; sourceTree = "<group>"; };
 		0523DBB61BEFB4CF006F15B5 /* NeedsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NeedsTableViewCell.xib; sourceTree = "<group>"; };
 		0523DBB91BEFBC36006F15B5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		05F4ED1A1BEFF9E300D0B839 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		05F4ED1B1BEFF9E300D0B839 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 				0523DB831BEE6F69006F15B5 /* libsqlite3.tbd in Frameworks */,
 				0523DB811BEE6F58006F15B5 /* libz.tbd in Frameworks */,
 				0523DB7F1BEE6F4A006F15B5 /* SystemConfiguration.framework in Frameworks */,
+				05F4ED1D1BEFF9E300D0B839 /* Parse.framework in Frameworks */,
 				0523DB7D1BEE6F3C006F15B5 /* StoreKit.framework in Frameworks */,
 				0523DB7B1BEE6F2F006F15B5 /* Security.framework in Frameworks */,
 				0523DB791BEE6F23006F15B5 /* QuartzCore.framework in Frameworks */,
@@ -113,6 +118,7 @@
 				0523DB701BEE6EDE006F15B5 /* AudioToolbox.framework in Frameworks */,
 				0523DB6E1BEDDE42006F15B5 /* Parse.framework in Frameworks */,
 				0523DB6D1BEDDE42006F15B5 /* Bolts.framework in Frameworks */,
+				05F4ED1C1BEFF9E300D0B839 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +170,8 @@
 		0523DB711BEE6EE7006F15B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				05F4ED1A1BEFF9E300D0B839 /* Bolts.framework */,
+				05F4ED1B1BEFF9E300D0B839 /* Parse.framework */,
 				0523DBB91BEFBC36006F15B5 /* MapKit.framework */,
 				0523DB821BEE6F69006F15B5 /* libsqlite3.tbd */,
 				0523DB801BEE6F58006F15B5 /* libz.tbd */,
@@ -471,6 +479,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Fullfilling",
 					Needs/Parse,
+					"$(PROJECT_DIR)/Fullfilling",
+					Needs,
 				);
 				INFOPLIST_FILE = "Fullfilling Needs/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -490,6 +500,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Fullfilling",
 					Needs/Parse,
+					"$(PROJECT_DIR)/Fullfilling",
+					Needs,
 				);
 				INFOPLIST_FILE = "Fullfilling Needs/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -518,6 +530,7 @@
 				0523DB691BEDD9AB006F15B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

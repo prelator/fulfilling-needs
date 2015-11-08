@@ -100,5 +100,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("got the notification and user info is: \(userInfo)")
         completionHandler(UIBackgroundFetchResult.NewData)
     }
+    
 }
 
