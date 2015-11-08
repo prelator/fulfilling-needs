@@ -1,0 +1,33 @@
+<div class="slds-media slds-tile slds-box slds slds-m-bottom--small slds-theme--default">
+  <div class="slds-media__figure">
+    <img class="slds-avatar slds-avatar--medium" src="../assets/SLDS0110/assets/images/avatar2.jpg" alt=""/>
+  </div>
+  <div class="slds-media__body">
+    <p class="slds-tile__title slds-truncate">
+      <a href="#">{{request.name}}</a>
+    </p>
+    <div class="slds-tile__detail">
+      <p class="slds-text-body--small">Help By: {{request.needDate}}</p>
+      <p class="slds-text-body--regular">{{request.description}}</p>
+    </div>
+    <div class="container slds-m-top--x-small">
+      <span class="slds-badge">{{request.area}}</span>
+      <span class="slds-badge slds-theme--shade">{{request.dateDelta}}</span>
+      <span class="slds-badge slds-theme--inverse">{{request.distanceDelta}}</span>
+    </div>
+  </div>
+  <div class="slds-no-flex">
+    <div class="slds-button-group">
+      <button class="slds-button slds-button--icon-border-filled slds-button--small slds-avatar slds-avatar--medium">
+        <img src="../assets/SLDS0110/assets/icons/utility/success_60.png" class="slds-button__icon slds-button__icon--large">
+        <span class="slds-assistive-text">Show More</span>
+        <!--Accept-->
+      </button>
+      <button class="slds-button slds-button--icon-border-filled slds-button--small slds-avatar slds-avatar--medium">
+        <img src="../assets/SLDS0110/assets/icons/utility/clear_60.png" class="slds-button__icon slds-button__icon--large">
+        <span class="slds-assistive-text">Show More</span>
+        <!--Reject-->
+      </button>
+    </div>
+  </div>
+</div>

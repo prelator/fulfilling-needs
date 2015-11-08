@@ -8,7 +8,7 @@ angular.module('fulfillingNeedsApp')
         views: {
           'tabView': {
             templateUrl: 'app/main/subviews/my-groups/my-groups.html',
-            controller: 'MyGroupsCtrl' 
+            controller: 'MyGroupsCtrl'
           }
         },
         data: {

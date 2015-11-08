@@ -1,14 +1,16 @@
 <!-- GROUP NEEDS -->
 <div id="tab-default-2" class="slds-tabs__content slds-show" role="tabpanel">
   <ul id="need-list" class="slds-list--vertical slds-has-cards">
-    <div class="slds-card">
+
+    <div class="slds-card" ng-repeat="group in data.groupRequestList">
+
       <div class="slds-card__header slds-grid">
         <div class="slds-media slds-media--center slds-has-flexi-truncate">
           <div class="slds-media__figure">
               <img src="../bower_components/salesforce-lightning-design-system/assets/icons/standard/groups.svg" class="slds-icon__container slds-icon slds-icon-standard-opportunity">
           </div>
           <div class="slds-media__body">
-            <h2 class="slds-text-heading--small slds-truncate">Worship Team (2)</h2>
+            <h2 class="slds-text-heading--small slds-truncate">{{group}}</h2>
           </div>
         </div>
       <div class="slds-no-flex">
@@ -19,69 +21,13 @@
         </div>
           </div>
       <div class="slds-card__body">
-      <!--/NEED TILE: OTHER NEEDS-->
-      <div class="slds-media slds-tile slds-box slds slds-m-bottom--small slds-theme--default">
-        <div class="slds-media__figure">
-          <img class="slds-avatar slds-avatar--medium" src="../bower_components/salesforce-lightning-design-system/assets/images/avatar1.jpg" alt=""/>
-        </div>
-        <div class="slds-media__body">
-          <p class="slds-tile__title slds-truncate">
-            <a href="#">John Client</a>
-          </p>
-          <div class="slds-tile__detail">
-            <p class="slds-text-body--small">Help By: 10/22/2015</p>
-            <p class="slds-text-body--regular">Billy Joe needs help mowing his lawn. Needs a young whipper snapper who knows how to handle weeds.</p>
-          </div>
-          <div class="container slds-m-top--x-small">
-            <span class="slds-badge">Counseling</span>
-            <span class="slds-badge slds-theme--shade">Last Week</span>
-            <span class="slds-badge slds-theme--inverse">1.5 Miles</span>
-          </div>
-        </div>
-        <div class="slds-no-flex">
-          <div class="slds-button-group">
-            <button class="slds-button slds-button--icon-border-filled slds-button--small slds-avatar slds-avatar--medium">
-            <a href="/my-responses-new">
-              <img src="../bower_components/salesforce-lightning-design-system/assets/icons/utility/chat_60.png" class="slds-button__icon slds-button__icon--large">
-              <span class="slds-assistive-text">Show More</span>
-              <!--Respond-->
-              </a>
-            </button>
-          </div>
-        </div>
+
+      <div ng-repeat="request in data.groupRequests | filter:group:group">
+
+        <request-tile request="request"></request-tile>
+
       </div>
-      <!--NEED TILE: OTHER NEEDS-->
-      <div class="slds-media slds-tile slds-box slds slds-m-bottom--small slds-theme--default">
-        <div class="slds-media__figure">
-          <img class="slds-avatar slds-avatar--medium" src="../bower_components/salesforce-lightning-design-system/assets/images/avatar3.jpg" alt=""/>
-        </div>
-        <div class="slds-media__body">
-          <p class="slds-tile__title slds-truncate">
-            <a href="#">Shawn Bradsworth</a>
-          </p>
-          <div class="slds-tile__detail">
-            <p class="slds-text-body--small">Help By: 10/22/2015</p>
-            <p class="slds-text-body--regular">My mother needs help mowing her lawn. Needs a young whipper snapper who knows how to handle weeds.</p>
-          </div>
-          <div class="container slds-m-top--x-small">
-            <span class="slds-badge">Counseling</span>
-            <span class="slds-badge slds-theme--shade">Last Week</span>
-            <span class="slds-badge slds-theme--inverse">1.5 Miles</span>
-          </div>
-        </div>
-        <div class="slds-no-flex">
-          <div class="slds-button-group">
-            <button class="slds-button slds-button--icon-border-filled slds-button--small slds-avatar slds-avatar--medium">
-            <a href="/my-responses-new">
-              <img src="../bower_components/salesforce-lightning-design-system/assets/icons/utility/chat_60.png" class="slds-button__icon slds-button__icon--large">
-              <span class="slds-assistive-text">Show More</span>
-              <!--Respond-->
-              </a>
-            </button>
-          </div>
-        </div>
-      </div>
-      </div>
+
     </div>
   </ul>
 </div>
