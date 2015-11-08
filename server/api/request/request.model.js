@@ -6,6 +6,7 @@ var mongoose = require('mongoose'),
 var RequestSchema = new Schema({
   icon: String,
   name: String,
+  userID: String,
   group: String,
   needDate: String,
   description: String,
