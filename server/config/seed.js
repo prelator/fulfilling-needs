@@ -54,7 +54,7 @@ User.find({}).remove(function() {
 Request.find({}).remove(function() {
   Request.create({
     'icon': 'avatar1.jpg',
-    'name': '',
+    'name': 'Brian Ferris',
     'userID': 1,
     'group': 'All Church Members',
     'needDate': '11/22/2015',
@@ -64,7 +64,7 @@ Request.find({}).remove(function() {
     'distanceDelta': '0.5 miles'
   }, {
     'icon': 'avatar2.jpg',
-    'name': '',
+    'name': 'Tonya Jones',
     'userID': 2,
     'group': 'Worship Team',
     'needDate': '11/13/2015',
@@ -73,9 +73,9 @@ Request.find({}).remove(function() {
     'dateDelta': 'This Week',
     'distanceDelta': '1.5 miles'
   }, {
-    'icon': 'avatar3.jpg',
-    'name': '',
-    'userID': 3,
+    'icon': 'avatar1.jpg',
+    'name': 'Brian Ferris',
+    'userID': 1,
     'group': 'Celebrate Recovery',
     'needDate': '11/22/2015',
     'description': 'My wife needs a carpooler to get into town.',
@@ -83,9 +83,9 @@ Request.find({}).remove(function() {
     'dateDelta': 'This Month',
     'distanceDelta': '0.5 miles'
   }, {
-    'icon': 'avatar1.jpg',
-    'name': '',
-    'userID': 1,
+    'icon': 'avatar2.jpg',
+    'name': 'Tonya Jones',
+    'userID': 2,
     'group': 'Berkeley Small Group',
     'needDate': '11/07/2015',
     'description': 'A neighbor of ours recently lost his wife. Does anyone have some free time to pitch in a meal?',
@@ -93,9 +93,9 @@ Request.find({}).remove(function() {
     'dateDelta': 'Yesterday',
     'distanceDelta': '2.5 miles'
   }, {
-    'icon': 'avatar2.jpg',
-    'name': '',
-    'userID': 2,
+    'icon': 'avatar1.jpg',
+    'name': 'Brian Ferris',
+    'userID': 1,
     'group': "Doubter's Club",
     'needDate': '11/24/2015',
     'description': "I've been looking for a job for a few months but had no bites. Could someone help me look over my resume?",
@@ -103,9 +103,9 @@ Request.find({}).remove(function() {
     'dateDelta': 'This Month',
     'distanceDelta': '2.5 miles'
   }, {
-    'icon': 'avatar3.jpg',
-    'name': '',
-    'userID': 3,
+    'icon': 'avatar2.jpg',
+    'name': 'Tonya Jones',
+    'userID': 2,
     'group': "All Church Members",
     'needDate': '10/14/2015',
     'description': "Several months ago, I hurt my back. The pain went away, but it recently came back with a vengeance. Do any of you know a good doctor to talk to about my chronic back pain?",
@@ -113,9 +113,9 @@ Request.find({}).remove(function() {
     'dateDelta': '3 Weeks Ago',
     'distanceDelta': '1.5 miles'
   }, {
-    'icon': 'avatar2.jpg',
-    'name': '',
-    'userID': 2,
+    'icon': 'avatar1.jpg',
+    'name': 'Brian Ferris',
+    'userID': 1,
     'group': "Worship Team",
     'needDate': '11/08/2015',
     'description': "My daughter is having a touch time in school, and I don't know how to support her. We are having a tough time connecting and I'm afraid I'm hurting her rather than helping.",
