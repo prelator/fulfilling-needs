@@ -18,6 +18,9 @@ module.exports = function(app) {
   // API Enumeration Routes
   app.use('/api/groups', require('./api/group'));
 
+  // API Enumeration Routes
+  app.use('/api/abillities', require('./api/abillity'));
+
 
   // All undefined asset or api routes should return a 404
   app.route('/:url(api|auth|components|app|bower_components|assets)/*')

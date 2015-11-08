@@ -4,6 +4,8 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 var request  = require('request')
   , xml2json = require('xml2json')
+  , xml2js = require('xml2js')
+  , parser = new xml2js.Parser()
   , parsers  = require('./lib/parsers')
   , mongoose = require('mongoose')
   , config   = require('./server/config/environment')
@@ -25,20 +27,27 @@ exports.getIndividuals = function individuals(){
   request(baseURI + 'individual_fit', function(err, response, xml){
     if (err || response.statusCode != 200)
       throw new Error(err)
-    var data = JSON.parse(xml2json.toJson(xml))
-    return parsers.parseIndividuals(data.ccb_api.response.individuals)
+    parser.parseString(xml, function (err, result) {
+      return exports.cacheRoute({
+        name: 'individual_fit'
+      , path: 'individual_fit'
+      , payload: JSON.stringify(result.ccb_api.response)
+      })
+    });
   })
 }
 
 exports.getGroupProfiles = function individuals(){
-  request(baseURI + 'group_profiles&modified_since=2014-01-01&include_participants=false&per_page=400', function(err, response, xml){
+  request(baseURI + 'group_profiles&modified_since=2014-01-01&include_participants=false', function(err, response, xml){
     if (err || response.statusCode != 200)
       throw new Error(err)
-    return exports.cacheRoute({
-      name: 'group_profiles'
-    , path: 'group_profiles&modified_since=2014-01-01&include_participants=false&per_page=400'
-    , payload: xml
-    })
+    parser.parseString(xml, function (err, result) {
+      return exports.cacheRoute({
+        name: 'group_profiles'
+      , path: 'group_profiles&modified_since=2014-01-01&include_participants=false'
+      , payload: JSON.stringify(result.ccb_api.response)
+      })
+    });
   })
 }
 
@@ -47,8 +56,13 @@ exports.getGroupNeeds = function individuals(groupID){
   request(baseURI + 'group_needs&id=' + groupID, function(err, response, xml){
     if (err || response.statusCode != 200)
       throw new Error(err)
-    var data = JSON.parse(xml2json.toJson(xml))
-    return console.log(require('util').inspect(data, { depth: null }));
+    parser.parseString(xml, function (err, result) {
+      return exports.cacheRoute({
+        name: 'group_needs&id=' + groupID
+      , path: 'group_needs&id=' + groupID
+      , payload: JSON.stringify(result.ccb_api.groups)
+      })
+    });
   })
 }
 
@@ -71,4 +85,4 @@ exports.cacheRoute = function(payload){
   });
 }
 
-return this.getGroupProfiles()
+return this.getGroupNeeds(44)

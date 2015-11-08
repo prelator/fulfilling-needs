@@ -1,13 +1,12 @@
 'use strict';
 
 var express = require('express');
-var controller = require('./group.controller');
+var controller = require('./abillity.controller');
 
 var router = express.Router();
 
 router.get('/', controller.index);
 router.get('/:id', controller.show);
-router.get('/:id/needs', controller.needs);
 router.post('/', controller.create);
 router.put('/:id', controller.update);
 router.patch('/:id', controller.update);

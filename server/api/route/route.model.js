@@ -9,5 +9,4 @@ var Route = mongoose.model('Route', mongoose.Schema({
 , payload: String
 }));
 
-
 module.exports = mongoose.model('Route', Route);

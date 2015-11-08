@@ -16,10 +16,11 @@ var Route = require('../route/route.model');
 
 // Get list of things
 exports.index = function(req, res) {
-  Route.findOne({ 'name': 'group_profiles' }, function (err, route) {
+  Route.findOne({ 'name': 'individual_fit' }, function (err, route) {
     if(err) { return handleError(res, err); }
     var payload = JSON.parse(route.payload)
-    return res.status(200).send(payload)
+    res.setHeader('Content-Type', 'application/json');
+    return res.status(200).send(payload[0].individuals[0])
   });
 };
 
@@ -31,18 +32,6 @@ exports.show = function(req, res) {
     return res.json(group);
   });
 };
-
-
-// Get a single thing
-exports.needs = function(req, res) {
-  var routeName = 'group_needs&id=' + req.params.id
-  Route.findOne({ 'name': routeName }, function (err, route) {
-    if(err) { return handleError(res, err); }
-    var payload = JSON.parse(route.payload)
-    return res.status(200).send(payload)
-  });
-};
-
 
 // Creates a new thing in the DB.
 exports.create = function(req, res) {
