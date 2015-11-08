@@ -5,16 +5,26 @@
         <div class="slds-modal__container">
           <div class="slds-modal__header">
             <div>
-              <img src="../assets/images/logo_ccb.png" class="slds-m-vertical--small">
+              <img src="../assets/SLDS0110/assets/icons/utility/chat_60.png" class="slds-m-vertical--small">
             </div>
-            <h2 class="slds-text-heading--medium">Login</h2>
+            <h1 class="slds-text-heading--large" style="font-weight:bold">Neighborly</h1>
+            <p class="slds-text-body--small">Powered by Church Community Builder</p>
+            <h2 class="slds-text-heading--medium slds-m-top--large">Login or <a href="/signup">Sign Up</a></h2>
           </div>
+          <!--ADMIN NOTES: REMOVE FROM PRODUCTION-->
           <div class="slds-notify slds-notify--alert slds-theme--inverse-text slds-theme--alert-texture" role="alert">
             <h2 class="slds-text-body--regular">Accounts are reset on server restart from <code>server/config/seed.js</code></h2>
             <h2 class="slds-text-body--regular">Default account is <code>test@test.com</code> / <code>test</code></h2>
             <h2 class="slds-text-body--regular">Admin account is <code>admin@admin.com</code> / <code>admin</code></h2>
-          </div>              
+          </div> 
           <div class="slds-modal__content">
+            <!--SOCIAL-->
+            <div style="display:none">
+              <a href="#" class="slds-button slds-button--neutral">Facebook</a>
+              <a href="#" class="slds-button slds-button--neutral">Twitter</a>
+              <a href="#" class="slds-button slds-button--neutral">Google+</a>
+            </div>
+            <!--FORM-->
             <div class="slds-form-element">
               <label class="slds-form-element__label" for="email">Email</label>
               <div class="slds-form-element__control">
@@ -46,7 +56,7 @@
 
           <div class="slds-modal__footer">
             <button class="slds-button slds-button--neutral slds-button--brand" type="submit">Login</button>
-            <a class="slds-button slds-button--neutral" href="/signup">Register</a>
+            <a class="slds-button slds-button--neutral" href="/signup">Sign Up</a>
           </div>
         </div>
       </form>      
