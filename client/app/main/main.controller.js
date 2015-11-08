@@ -12,23 +12,38 @@ angular.module('fulfillingNeedsApp')
       console.log(error);
     });
 
-    apiService.getUserRequests().then(function(response) {
-      $scope.data.userRequests = response;
-    }, function(error){
-      console.log(error);
-    });
-
-    apiService.getGroupRequests(0).then(function(response) {
-      var listGroups = {};
+    apiService.getRequests().then(function(response) {
+      $scope.data.requests = response;
       $scope.data.groupRequests = response;
-      for(var i=0; i < response.length; i++){
-        listGroups[response[i].group] = 0;
-      }
-      $scope.data.groupRequestList = Object.keys(listGroups);
-
+      $scope.data.userRequests = response.filter(function(item){
+        return item.userID === '2';
+      });
+        var listGroups = {};
+        for(var i=0; i < response.length; i++){
+          listGroups[response[i].group] = 0;
+        }
+        $scope.data.groupRequestList = Object.keys(listGroups);
     }, function(error){
       console.log(error);
     });
+
+    // apiService.getUserRequests().then(function(response) {
+    //   $scope.data.userRequests = response;
+    // }, function(error){
+    //   console.log(error);
+    // });
+
+    // apiService.getGroupRequests(0).then(function(response) {
+    //   var listGroups = {};
+    //   $scope.data.groupRequests = response;
+    //   for(var i=0; i < response.length; i++){
+    //     listGroups[response[i].group] = 0;
+    //   }
+    //   $scope.data.groupRequestList = Object.keys(listGroups);
+    //
+    // }, function(error){
+    //   console.log(error);
+    // });
 
     // Sample API call
     apiService.getGroups().then(function (response) {
@@ -44,7 +59,7 @@ angular.module('fulfillingNeedsApp')
       }
       $scope.data.needTypes = typeList;
     }, function (response) {
-      
+
     });
 
     $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {

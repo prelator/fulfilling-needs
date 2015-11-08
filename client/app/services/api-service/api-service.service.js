@@ -141,16 +141,16 @@ angular.module('fulfillingNeedsApp')
       getGroupRequests: function(group_id) {
         var deferred = $q.defer();
         //faking a return
-        deferred.resolve(mockObject.requests.group);
+        //deferred.resolve(mockObject.requests.group);
 
-        // $http({
-        //   method: 'GET',
-        //   url: '/api/groups/' + group_id + '/requests'
-        // }).then(function successCallback(response) {
-        //     deferred.resolve(response.data);
-        //   }, function errorCallback(response) {
-        //     deferred.reject(response);
-        //   });
+        $http({
+          method: 'GET',
+          url: '/api/groups/' + group_id + '/requests'
+        }).then(function successCallback(response) {
+            deferred.resolve(response.data);
+          }, function errorCallback(response) {
+            deferred.reject(response);
+          });
 
         return deferred.promise;
       },
