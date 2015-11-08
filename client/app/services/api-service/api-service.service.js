@@ -26,7 +26,7 @@ angular.module('fulfillingNeedsApp')
           });
 
         return deferred.promise;
-      }
+      },
 
       //api/requests
       getGroup: function(group_id) {
@@ -42,7 +42,7 @@ angular.module('fulfillingNeedsApp')
           });
 
         return deferred.promise;
-      }
+      },
 
       //api/requests
       getRequests: function() {
@@ -58,7 +58,7 @@ angular.module('fulfillingNeedsApp')
           });
 
         return deferred.promise;
-      }
+      },
 
       //api/groups/:group_id/requests
       getGroupRequests: function(group_id) {
@@ -74,7 +74,7 @@ angular.module('fulfillingNeedsApp')
           });
 
         return deferred.promise;
-      }
+      },
 
       //api/requests/:req_id
       getRequest: function(req_id) {
@@ -90,7 +90,7 @@ angular.module('fulfillingNeedsApp')
           });
 
         return deferred.promise;
-      }
+      },
 
       //api/church/requests
       getChurchRequests: function() {
@@ -106,10 +106,10 @@ angular.module('fulfillingNeedsApp')
           });
 
         return deferred.promise;
-      }
+      },
 
       //api/community/requests/:postalcode/:milerange
-      getCommunityRequests: function(postalcode, range) {
+      getCommunityRequests: function(postalcode, range /* optional */) {
         var deferred = $q.defer();
 
         $http({
@@ -122,7 +122,7 @@ angular.module('fulfillingNeedsApp')
           });
 
         return deferred.promise;
-      }
+      },
 
       //api/users/:user_id/requests
       getUserRequests: function(user_id) {
@@ -138,7 +138,7 @@ angular.module('fulfillingNeedsApp')
           });
 
         return deferred.promise;
-      }
+      },
 
       //api/users/:user_id/abilities
       getUserAbilities: function(user_id) {
@@ -154,7 +154,7 @@ angular.module('fulfillingNeedsApp')
           });
 
         return deferred.promise;
-      }
+      },
 
       //api/master/abilities
       getUserAbilities: function() {
@@ -170,7 +170,7 @@ angular.module('fulfillingNeedsApp')
           });
 
         return deferred.promise;
-      }
+      },
 
       //api/master/abilities/:ability_id
       getUserAbilities: function(ability_id) {
