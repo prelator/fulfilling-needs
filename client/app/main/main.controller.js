@@ -2,8 +2,21 @@
 
 angular.module('fulfillingNeedsApp')
   .controller('MainCtrl', function ($scope, $http, apiService, $state) {
-    
+
     $scope.viewName = $state.current.data.title;
+    $scope.data = {};
+
+    apiService.getSummaryData().then(function(response) {
+      $scope.data.summary = response;
+    }, function(error){
+      console.log(error);
+    });
+
+    apiService.getUserRequests().then(function(response) {
+      $scope.data.userRequests = response;
+    }, function(error){
+      console.log(error);
+    });
 
     // Sample API call
     apiService.getGroups().then(function (response) {

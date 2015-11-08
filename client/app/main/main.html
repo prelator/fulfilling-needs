@@ -40,31 +40,31 @@
           <li class="slds-tabs__item slds-text-heading--label" title="My Needs" role="presentation">
             <a ui-sref="main.my-needs" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1">
               <img src="../assets/SLDS0110/assets/icons/standard/avatar.svg" class="slds-icon__container slds-icon slds-icon-standard-opportunity">
-              My Requests (1)
+              My Requests ({{data.summary.counts.user}})
             </a>
           </li>
           <li class="slds-tabs__item slds-text-heading--label" title="My Groups" role="presentation">
             <a ui-sref="main.my-groups" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2">
               <img src="../assets/SLDS0110/assets/icons/standard/groups.svg" class="slds-icon__container slds-icon slds-icon-standard-opportunity">
-              My Groups (2)
+              My Groups ({{data.summary.counts.group}})
             </a>
           </li>
           <li class="slds-tabs__item slds-text-heading--label" title="My Church" role="presentation">
             <a ui-sref="main.my-church" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3">
               <img src="../assets/SLDS0110/assets/icons/standard/household.svg" class="slds-icon__container slds-icon slds-icon-standard-opportunity">
-              My Church (8)
+              My Church ({{data.summary.counts.church}})
             </a>
           </li>
           <li class="slds-tabs__item slds-text-heading--label" title="My Community" role="presentation">
             <a ui-sref="main.my-community" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-4">
               <img src="../assets/SLDS0110/assets/icons/custom/custom78.svg" class="slds-icon__container slds-icon slds-icon-standard-opportunity">
-              My Community (20)
+              My Community ({{data.summary.counts.community}})
             </a>
           </li>
           <li class="slds-tabs__item slds-text-heading--label" title="My Abilities" role="presentation">
             <a ui-sref="main.my-abilities" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-5">
               <img src="../assets/SLDS0110/assets/icons/custom/custom44.svg" class="slds-icon__container slds-icon slds-icon-standard-opportunity">
-              My Service Areas (5)
+              My Service Areas ({{data.summary.counts.abilities}})
             </a>
           </li>
         </ul>
@@ -78,10 +78,10 @@
           <h2 class="slds-text-body--regular">There are 10 other needs in your community. Do you know someone who can help?</h2>
         </div>
         <!--/ALERT-->
-        
+
         <!-- Tabs view -->
         <div ui-view="tabView" class="slds-m-top--small"></div>
-        
+
 
       </div>
       <!--/TABS-->
