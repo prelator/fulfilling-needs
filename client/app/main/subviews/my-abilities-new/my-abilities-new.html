@@ -1,0 +1,54 @@
+<!--FORM: NEW RESPONSE-->
+<div class="slds-box slds-m-vertical--small">
+	<h3 class="slds-text-heading--small">New Service Area</h3>
+	<form role="form" class="slds-form--stacked slds-grid slds-wrap slds-m-top--large">
+		<div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1">
+			<!--ResponseSentBy-->
+			<div class="slds-form-element">
+				<label class="slds-form-element__label" for="response_sent_by">Service Area For</label>
+				<div class="slds-form-element__control">
+					<a href="#" id="response_sent_by" class="slds-form-element__static">Mary Server</a>
+				</div>
+			</div>
+			<!--NeedType-->
+			<div class="slds-lookup" data-select="multi" data-scope="single" data-typeahead="true">
+			  <div class="slds-form-element">
+			    <label class="slds-form-element__label" for="lookup">Need Type</label>
+			    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right">
+			      	<img src="../assets/SLDS0110/assets/icons/utility/search_60.png" class="slds-input__icon">
+			      <input id="lookup" class="slds-input" type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" placeholder="Enter your need here"/>
+			    </div>
+			  </div>
+			  <div class="slds-lookup__menu" role="listbox" style="display:none"><!--DON'T HIDE FOREVER!-->
+			    <div class="slds-lookup__item">
+			      <button class="slds-button">
+			      	  <img src="../assets/SLDS0110/assets/icons/utility/search_60.png" class="slds-icon slds-icon-text-default slds-icon--small">&quot;ac&quot; in Needs</button>
+			    </div>
+			    <ul class="slds-lookup__list" role="presentation">
+			      <li class="slds-lookup__item">
+			        <a id="s01" href="#" role="option">
+			      	  <img src="../assets/SLDS0110/assets/icons/action/share_thanks_60.png" class="slds-icon slds-icon-text-default slds-icon--small slds-icon-standard-contact">Construction - A/C</a>
+			      </li>
+			      <li class="slds-lookup__item">
+			        <a id="s02" href="#" role="option">
+			      	  <img src="../assets/SLDS0110/assets/icons/action/share_thanks_60.png" class="slds-icon slds-icon-text-default slds-icon--small slds-icon-standard-contact">Drama - Acting</a>
+			      </li>
+			      <li class="slds-lookup__item">
+			        <a id="s03" href="#" role="option">
+			      	  <img src="../assets/SLDS0110/assets/icons/action/share_thanks_60.png" class="slds-icon slds-icon-text-default slds-icon--small slds-icon-standard-contact">Mechanics - Vacuum Cleaner</a>
+			      </li>
+			    </ul>
+			  </div>
+			</div>
+			<!--Actions-->
+			<section class="slds-clearfix slds-m-top--medium">
+					<div class="slds-float--right slds-button-group" role="group">
+					<button class="slds-button slds-button--brand">Submit</button>
+					<button class="slds-button slds-button--neutral"><a href="/my-abilities">Cancel</a></button>
+				</div>
+			</section>
+
+		</div>
+	</form>
+</div>
+<!--/FORM: NEW COMMENT-->
