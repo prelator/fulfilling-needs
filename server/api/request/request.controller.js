@@ -31,14 +31,10 @@ exports.show = function(req, res) {
 
 // Creates a new thing in the DB.
 exports.create = function(req, res) {
-  return res.send({
-    msg: 'Creating New Request'
-  , body: req.body
+  Request.create(req.body, function(err, request) {
+    if(err) { return handleError(res, err); }
+    return res.status(201).json(request);
   });
-  // Group.create(req.body, function(err, group) {
-  //   if(err) { return handleError(res, err); }
-  //   return res.status(201).json(group);
-  // });
 };
 
 // Updates an existing thing in the DB.
