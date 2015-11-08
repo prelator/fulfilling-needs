@@ -3,13 +3,31 @@
 angular.module('fulfillingNeedsApp')
   .service('apiService', function ($http, $q) {
 
+    //request
+    //  icon, name, needDate, description, area, requestDateDelta, distanceDelta
     var mockObject = {
       'summary': {'counts':{'user':1, 'group':3, 'church':40, 'community':1000, 'abilities':5}},
       'requests': {
-        'users': [{}],
+        'user': [{
+          'icon': 'avatar2.jpg',
+          'name': 'Mary Server',
+          'needDate': '10/22/2015',
+          'description': 'I need help mowing my lawn. Need a young whipper snapper who knows how to handle weeds.',
+          'area': 'lawncare',
+          'dateDelta': 'Yesterday',
+          'distanceDelta': '1.5 miles'
+        }],
         'group': [{}],
         'church': [{}],
         'community': [{}]
+      },
+      'user':{
+        'abilities': [{}],
+        'groups': [{}],
+        'prefs': {
+          'postalCode':11111,
+          'communityRadius':50 //miles
+        }
       }
     }
 
@@ -138,6 +156,9 @@ angular.module('fulfillingNeedsApp')
       getUserRequests: function(user_id) {
         var deferred = $q.defer();
 
+        //faking a return
+        deferred.resolve(mockObject.requests.user);
+
         $http({
           method: 'GET',
           url: '/api/users/' + user_id + '/requests'
@@ -167,28 +188,12 @@ angular.module('fulfillingNeedsApp')
       },
 
       //api/master/abilities
-      getUserAbilities: function() {
+      getAbilitiesList: function() {
         var deferred = $q.defer();
 
         $http({
           method: 'GET',
           url: '/api/master/abilities'
-        }).then(function successCallback(response) {
-            deferred.resolve(response.data);
-          }, function errorCallback(response) {
-            deferred.reject(response);
-          });
-
-        return deferred.promise;
-      },
-
-      //api/master/abilities/:ability_id
-      getUserAbilities: function(ability_id) {
-        var deferred = $q.defer();
-
-        $http({
-          method: 'GET',
-          url: '/api/master/abilities/' + ability_id
         }).then(function successCallback(response) {
             deferred.resolve(response.data);
           }, function errorCallback(response) {

@@ -7,7 +7,13 @@ angular.module('fulfillingNeedsApp')
     $scope.data = {};
 
     apiService.getSummaryData().then(function(response) {
-      $scope.data['summary'] = response;
+      $scope.data.summary = response;
+    }, function(error){
+      console.log(error);
+    });
+
+    apiService.getUserRequests().then(function(response) {
+      $scope.data.userRequests = response;
     }, function(error){
       console.log(error);
     });
